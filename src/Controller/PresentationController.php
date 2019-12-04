@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Presentation;
 use App\Repository\PresentationRepository;
 
-Class PresentationController extends AbstractController
+class PresentationController extends AbstractController
 {
     /**
     * @Route("/presentation", name="app_presentation")
@@ -17,12 +17,11 @@ Class PresentationController extends AbstractController
     {
         $presentations = $presentationRepository->findAll();
 
-        if (!$presentation){
+        if (!$presentation) {
             throw $this->createNotFoundException('Aucune information n\'est disponible.');
         }
         return $this->render('presentation.html.twig', [
                 'presentations' => $presentations
         ]);
     }
-
 }
