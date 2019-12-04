@@ -15,13 +15,13 @@ Class PresentationController extends AbstractController
     */
     public function index() :Response
     {
-        $presentation = $presentationRepository->findAll();
+        $presentations = $presentationRepository->findAll();
 
         if (!$presentation){
             throw $this->createNotFoundException('Aucune information n\'est disponible.');
         }
         return $this->render('presentation.html.twig', [
-                'presentation' => $presentation
+                'presentations' => $presentations
         ]);
     }
 
