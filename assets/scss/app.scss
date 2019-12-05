@@ -1,19 +1,27 @@
 @import "vars";
 
+
 body
 {
     margin: 0%;
 }
 
-.presentation_detail
+.who_am_i
 {
-    background-color: #AAB39D;
+    font-family: $titre_police;
+    text-align: center;
 }
 
-.Who_am_i, .presentation_part
+.sb_who_am_i
 {
-    margin: 1em;
-    text-align: justify;
+    font-family: $titre_police;
+    text-align: center;
+}
+
+.presentation_paragraph
+{
+    font-family: 'Hind Guntur', sans-serif;
+    font-size: 1.5rem;
 }
 
 .presentation_img
@@ -25,35 +33,78 @@ body
     margin-right: auto;
 }
 
-.presentation_paragraph 
-{
-    color: $secondary-color;
-}
 
 
-
+// destok version:
 
 @media (min-width: 676px)
-
 {
-    .presentation_detail
+    // div 100% for title alignement
+    .presentation_intro
     {
-        border: solid;
-        margin: 1em;
-        display: flex;
-    }
-    .presentation_img
-    {
-        margin-top: 25%;
-        width: 25em;
-        height: 25em;
-        margin-right: 3em;
-        margin-left: 3em;
+        width:100%;
+        min-height:100vh;
     }
 
-    .presentation_column
+    // color of img, title h2,h3 and text and first alignement
+    .presentation_section
     {
+        display: flex;
+        background-color: black;
+        color:white;
+    }
+
+    // twig boucle presentation for column alignement
+    .presentations{
         display: flex;
         flex-direction: column;
+    }
+
+    .presentation_part{
+        width:100%;
+        text-align: justify;
+    }
+
+    .presentation_img
+    {
+        width: 33,3%;
+        height: 100vh;
+        object-fit:cover;
+        margin-right:0;
+        margin-left:0;
+    }
+
+    //margin of text, title and sub title
+    .presentation_title{
+        margin: 25px;
+    }
+
+    .presentation_subtitle{
+        margin: 25px;
+    }
+
+    .presentation_paragraph{
+        margin-left: 45px;
+        margin-right: 25px;
+    }
+
+    // colomn of text
+    .presentation_detail
+    {
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        min-height:100vh;
+    }
+
+    // Physical size of title and sub title
+    .who_am_i
+    {
+        font-size: 8rem;
+    }
+
+    .sb_who_am_i
+    {
+        font-size: 4rem;
     }
 }
