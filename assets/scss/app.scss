@@ -1,9 +1,5 @@
 @import "vars";
 
-body{
-    background-color: $secondary-color;
-}
-
 a{
     color: $color-for-link;
 }
@@ -43,4 +39,98 @@ a:active {
     padding-right: 1rem;
     padding-left: 1rem;
     font-family: 'Rufina', serif;
+}
+
+body{
+    margin: 0%;
+}
+
+.who_am_i{
+    font-family: $titre_police;
+    text-align: center;
+}
+
+.sb_who_am_i{
+    font-family: $titre_police;
+    text-align: center;
+}
+
+.presentation_paragraph{
+    font-family: 'Hind Guntur', sans-serif;
+    font-size: 1.5rem;
+}
+
+.presentation_img{
+    width: 20em;
+    height: 20em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// destok version:
+
+@media (min-width: 676px){
+    // div 100% for title alignement
+    .presentation_intro{
+        width:100%;
+        min-height:100vh;
+    }
+
+    // color of img, title h2,h3 and text and first alignement
+    .presentation_section{
+        display: flex;
+        background-color: black;
+        color:white;
+    }
+
+    // twig boucle presentation for column alignement
+    .presentations{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentation_part{
+        width:100%;
+        text-align: justify;
+    }
+
+    .presentation_img{
+        width: 33,3%;
+        height: 100vh;
+        object-fit:cover;
+        margin-right:0;
+        margin-left:0;
+    }
+
+    //margin of text, title and sub title
+    .presentation_title{
+        margin: 25px;
+    }
+
+    .presentation_subtitle{
+        margin: 25px;
+    }
+
+    .presentation_paragraph{
+        margin-left: 45px;
+        margin-right: 25px;
+    }
+
+    // colomn of text
+    .presentation_detail{
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        min-height:100vh;
+    }
+
+    // Physical size of title and sub title
+    .who_am_i{
+        font-size: 8rem;
+    }
+
+    .sb_who_am_i{
+        font-size: 4rem;
+    }
 }

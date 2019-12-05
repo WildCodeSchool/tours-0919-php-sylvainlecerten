@@ -1,20 +1,26 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}
-    <h1>Who AmI ?</h1>
+    <h1 class="title_top">Who AmI ?</h1>
 {% endblock %}
+
 {% block body %}
-    <section class="presentation-intro">
-        <h1>WHO AM I ?</h1>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</h2>
+    <section class="presentation_intro">
+        <h1 class="who_am_i">WHO AM I ?</h1>
+        <h2 class="sb_who_am_i">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</h2>
     </section>
-    <section class="presentation-detail">
-        <img class="presentation-img" src="" alt="illustration">
-        {% for presentation in presentations %}
-            <div class="presentation-part">
-                <h2 class="presentation-title">{{ presentation.title }}</h2>
-                <h3 class="presentation-subtitle">{{ presentation.subtitle }}</h2>
-                <p class="presentation-paragraph">{{ presentation.paragraph}}</p>
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFbGbRhmxEkHjKcbbGs8DItEpqEGuSTBRiGnC76RvKrdO03iiZlA&s" class="presentation_img" alt="illustration">
+            <div class="presentations">
+                {% for presentation in presentations %}
+                    <div class="presentation_part">
+                        <h2 class="presentation_title">{{ presentation.title }}</h2>
+                        <h3 class="presentation_subtitle">{{ presentation.subtitle }}</h2>
+                        <p class="presentation_paragraph">{{ presentation.paragraph}}</p>
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </section>
 {% endblock %}
