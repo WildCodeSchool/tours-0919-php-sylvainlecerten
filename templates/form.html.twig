@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation{% endblock %}
+
+{% block body %}
+   <h1>Ajouter un paragraphe</h1>
+   {{ include('add.html.twig') }}
+   <a href="{{ path('admin') }}">Retour</a>
+{% endblock %}
