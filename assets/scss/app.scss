@@ -1,31 +1,66 @@
 @import "vars";
 
+a{
+    color: $color-for-link;
+}
 
-body
-{
+a:hover{
+    color: $link-is-hover;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+    color: $link-is-hover;
+}
+
+.navbar-nav{
+    margin: 0.3em;
+    font-family: 'Rufina', serif;
+}
+
+.ul_copywriter{
+    display: flex;
+    background-color: white;
+    list-style: none;
+    margin-bottom: 0em;
+    text-align: center;
+    padding-inline-start: 0.1em;
+}
+
+.box-footer{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.nav-lifooter{
+    margin: 1em;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-family: 'Rufina', serif;
+}
+
+body{
     margin: 0%;
 }
 
-.who_am_i
-{
+.who_am_i{
     font-family: $titre_police;
     text-align: center;
 }
 
-.sb_who_am_i
-{
+.sb_who_am_i{
     font-family: $titre_police;
     text-align: center;
 }
 
-.presentation_paragraph
-{
+.presentation_paragraph{
     font-family: 'Hind Guntur', sans-serif;
     font-size: 1.5rem;
 }
 
-.presentation_img
-{
+.presentation_img{
     width: 20em;
     height: 20em;
     display: block;
@@ -33,22 +68,17 @@ body
     margin-right: auto;
 }
 
-
-
 // destok version:
 
-@media (min-width: 676px)
-{
+@media (min-width: 676px){
     // div 100% for title alignement
-    .presentation_intro
-    {
+    .presentation_intro{
         width:100%;
         min-height:100vh;
     }
 
     // color of img, title h2,h3 and text and first alignement
-    .presentation_section
-    {
+    .presentation_section{
         display: flex;
         background-color: black;
         color:white;
@@ -65,8 +95,7 @@ body
         text-align: justify;
     }
 
-    .presentation_img
-    {
+    .presentation_img{
         width: 33,3%;
         height: 100vh;
         object-fit:cover;
@@ -89,8 +118,7 @@ body
     }
 
     // colomn of text
-    .presentation_detail
-    {
+    .presentation_detail{
         display: flex;
         flex-direction: row;
         width:100%;
@@ -98,13 +126,11 @@ body
     }
 
     // Physical size of title and sub title
-    .who_am_i
-    {
+    .who_am_i{
         font-size: 8rem;
     }
 
-    .sb_who_am_i
-    {
+    .sb_who_am_i{
         font-size: 4rem;
     }
 }
