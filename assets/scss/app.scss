@@ -1,9 +1,59 @@
 @import "vars";
 
-body {
-    background-color: $secondary-color;
+body
+{
+    margin: 0%;
 }
 
-a {
-    color: $warm-color;
+.presentation_detail
+{
+    background-color: #AAB39D;
+}
+
+.Who_am_i, .presentation_part
+{
+    margin: 1em;
+    text-align: justify;
+}
+
+.presentation_img
+{
+    width: 20em;
+    height: 20em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentation_paragraph 
+{
+    color: $secondary-color;
+}
+
+
+
+
+@media (min-width: 676px)
+
+{
+    .presentation_detail
+    {
+        border: solid;
+        margin: 1em;
+        display: flex;
+    }
+    .presentation_img
+    {
+        margin-top: 25%;
+        width: 25em;
+        height: 25em;
+        margin-right: 3em;
+        margin-left: 3em;
+    }
+
+    .presentation_column
+    {
+        display: flex;
+        flex-direction: column;
+    }
 }
