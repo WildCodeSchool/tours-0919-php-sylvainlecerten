@@ -14,7 +14,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\PresType;
 
-
 class PresentationController extends AbstractController
 {
     /**
@@ -34,7 +33,7 @@ class PresentationController extends AbstractController
 
     /**
     * @Route("/admin", name="app_administration")
-    */    
+    */
     public function addParagraph(Request $request)
     {
         $presentation = new Presentation();
@@ -42,17 +41,16 @@ class PresentationController extends AbstractController
         $form->handleRequest($request);
      
         if ($form->isSubmitted() && $form->isValid()) {
-         $emm = $this->getDoctrine()->getManager();
-         $emm->persist($presentation);
-         $emm->flush();
+            $emm = $this->getDoctrine()->getManager();
+            $emm->persist($presentation);
+            $emm->flush();
          
-         return $this->redirectToRoute('/presentation');
+            return $this->redirectToRoute('/presentation');
         }
      
         return $this->render('form.html.twig', [
-         'paragraph' => $presentation,
+         'presentation' => $presentation,
          'form' => $form->createView(),
         ]);
-     
     }
 }
