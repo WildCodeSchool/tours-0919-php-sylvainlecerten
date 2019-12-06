@@ -36,9 +36,9 @@ class PresentationController extends AbstractController
         $presentationForm->handleRequest($request);
 
         if ($presentationForm->isSubmitted() && $presentationForm->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($presentation);
-            $em->flush();
+            $emm = $this->getDoctrine()->getManager();
+            $emm->persist($presentation);
+            $emm->flush();
             
             return $this->redirectToRoute('app_presentation');
         }

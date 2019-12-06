@@ -16,6 +16,7 @@ class PresentationType extends AbstractType
             ->add('subtitle')
             ->add('paragraph')
         ;
+        $options;
     }
 
     public function configureOptions(OptionsResolver $resolver)
