@@ -31,21 +31,21 @@ class PresentationController extends AbstractController
     */
     public function newPresentation(Request $request): Response
     {
-    $presentation = new Presentation();
-    $presentationForm = $this->createForm(PresentationType::class, $presentation);
-    $presentationForm->handleRequest($request);
+        $presentation = new Presentation();
+        $presentationForm = $this->createForm(PresentationType::class, $presentation);
+        $presentationForm->handleRequest($request);
 
-    if ($presentationForm->isSubmitted() && $presentationForm->isValid()) {
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($presentation);
-        $em->flush();
-        
-        return $this->redirectToRoute('app_presentation');
-    }
+        if ($presentationForm->isSubmitted() && $presentationForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($presentation);
+            $em->flush();
+            
+            return $this->redirectToRoute('app_presentation');
+        }
 
-    return $this->render('form.html.twig', [
-        'presentation' => $presentation,
-        'form' => $presentationForm->createView(),
-    ]);
+        return $this->render('form.html.twig', [
+            'presentation' => $presentation,
+            'form' => $presentationForm->createView(),
+        ]);
     }
 }
