@@ -1,4 +1,5 @@
 @import "vars";
+@import "presentationForm";
 
 .footer_link{
     color: $color-for-link;
@@ -25,7 +26,7 @@
     font-family: 'Rufina', serif;
 }
 
-//Navbar link list
+//footer link list
 .ul_copywriter{
     display: flex;
     background-color: white;
