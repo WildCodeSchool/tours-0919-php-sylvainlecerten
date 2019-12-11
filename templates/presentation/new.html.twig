@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Presentation{% endblock %}
+{% block title %}Présentation - Modification{% endblock %}
 
 {% block body %}
-    <h1>Create new Presentation</h1>
+    <h1 class="presentation-add__title">Ajouter une nouvelle partie à la présentation :</h1>
 
     {{ include('presentation/_form.html.twig') }}
 
-    <a href="{{ path('presentation_index') }}">back to list</a>
+    <a class="presentation-add__return-button" href="{{ path('presentation_index') }}">Retour</a>
 {% endblock %}

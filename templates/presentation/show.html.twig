@@ -1,34 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Presentation{% endblock %}
+{% block title %}Voir une entrée{% endblock %}
 
 {% block body %}
-    <h1>Presentation</h1>
+    <h1 class="presentation-show__title">Paragraphe</h1>
 
-    <table class="table">
+    <table class="presentation-show__table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ presentation.id }}</td>
+                <th class="presentation-show__table-case">Id</th>
+                <td class="presentation-show__table-case">{{ presentation.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
-                <td>{{ presentation.title }}</td>
+                <th class="presentation-show__table-case">Title</th>
+                <td class="presentation-show__table-case">{{ presentation.title }}</td>
             </tr>
             <tr>
-                <th>Subtitle</th>
-                <td>{{ presentation.subtitle }}</td>
+                <th class="presentation-show__table-case">Subtitle</th>
+                <td class="presentation-show__table-case">{{ presentation.subtitle }}</td>
             </tr>
             <tr>
-                <th>Paragraph</th>
-                <td>{{ presentation.paragraph }}</td>
+                <th class="presentation-show__table-case">Paragraph</th>
+                <td class="presentation-show__table-case">{{ presentation.paragraph }}</td>
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('presentation_index') }}">back to list</a>
-
-    <a href="{{ path('presentation_edit', {'id': presentation.id}) }}">edit</a>
-
+    <div class="presentation-show__buttons">
+        <a class="presentation-show__button" href="{{ path('presentation_index') }}">Retour</a>
+        <a class="presentation-show__button" href="{{ path('presentation_edit', {'id': presentation.id}) }}">Editer</a>
+    </div>
     {{ include('presentation/_delete_form.html.twig') }}
 {% endblock %}
