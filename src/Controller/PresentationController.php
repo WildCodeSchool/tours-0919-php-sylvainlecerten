@@ -18,10 +18,10 @@ class PresentationController extends AbstractController
     /**
      * @Route("/", name="presentation_index", methods={"GET"})
      */
-    public function index(PresentationRepository $presentationRepository): Response
+    public function index(PresentationRepository $presRepository): Response
     {
         return $this->render('presentation/index.html.twig', [
-            'presentations' => $presentationRepository->findAll(),
+            'presentations' => $presRepository->findAll(),
         ]);
     }
 
