@@ -2,50 +2,93 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Presentation;
-use App\Repository\PresentationRepository;
 use App\Form\PresentationType;
+use App\Repository\PresentationRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/presentation")
+ */
 class PresentationController extends AbstractController
 {
     /**
-    * @Route("/presentation", name="app_presentation")
-    */
-    public function index(PresentationRepository $presRepository) :Response
+     * @Route("/", name="presentation_index", methods={"GET"})
+     */
+    public function index(PresentationRepository $presRepository): Response
     {
-        $presentations = $presRepository->findAll();
-
-        if (!$presentations) {
-            throw $this->createNotFoundException('Aucune information n\'est disponible.');
-        }
-        return $this->render('presentation.html.twig', [
-                'presentations' => $presentations
+        return $this->render('presentation/index.html.twig', [
+            'presentations' => $presRepository->findAll(),
         ]);
     }
+
     /**
-    * @Route("/new", name="presentation_new")
-    */
-    public function newPresentation(Request $request): Response
+     * @Route("/new", name="presentation_new", methods={"GET","POST"})
+     */
+    public function new(Request $request): Response
     {
         $presentation = new Presentation();
-        $presentationForm = $this->createForm(PresentationType::class, $presentation);
-        $presentationForm->handleRequest($request);
+        $form = $this->createForm(PresentationType::class, $presentation);
+        $form->handleRequest($request);
 
-        if ($presentationForm->isSubmitted() && $presentationForm->isValid()) {
-            $emm = $this->getDoctrine()->getManager();
-            $emm->persist($presentation);
-            $emm->flush();
-            
-            return $this->redirectToRoute('app_presentation');
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($presentation);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('presentation_index');
         }
 
-        return $this->render('form.html.twig', [
+        return $this->render('presentation/new.html.twig', [
             'presentation' => $presentation,
-            'form' => $presentationForm->createView(),
+            'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/{id}", name="presentation_show", methods={"GET"})
+     */
+    public function show(Presentation $presentation): Response
+    {
+        return $this->render('presentation/show.html.twig', [
+            'presentation' => $presentation,
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="presentation_edit", methods={"GET","POST"})
+     */
+    public function edit(Request $request, Presentation $presentation): Response
+    {
+        $form = $this->createForm(PresentationType::class, $presentation);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('presentation_index');
+        }
+
+        return $this->render('presentation/edit.html.twig', [
+            'presentation' => $presentation,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="presentation_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Presentation $presentation): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$presentation->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($presentation);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('presentation_index');
     }
 }
