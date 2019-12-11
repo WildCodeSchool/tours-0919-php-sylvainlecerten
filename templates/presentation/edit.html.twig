@@ -3,11 +3,10 @@
 {% block title %}Edit Presentation{% endblock %}
 
 {% block body %}
-    <h1>Edit Presentation</h1>
-
-    {{ include('presentation/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('presentation_index') }}">back to list</a>
-
+    <h1 class="presentation-index__title">Editer un paragraphe :</h1>
+    <div class="presentation-edit__form">
+        {{ include('presentation/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        <a class="presentation-edit__button" href="{{ path('presentation_index') }}">Retour</a>
+    </div>
     {{ include('presentation/_delete_form.html.twig') }}
 {% endblock %}
