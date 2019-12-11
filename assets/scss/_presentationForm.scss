@@ -4,6 +4,7 @@
     display:flex;
     flex-direction: column;
 }
+
 .presentation-index__title{
     width:100%;
     padding-left: 5%;
@@ -14,33 +15,40 @@
     color:white;
     font-size: 2rem;
 }
+
 .presentation-index__table{
     max-width:90%;
     margin-left:5%;
     margin-right: 5%;
     margin-bottom: 10vh;
 }
+
 .presentation-index__column-title{
     text-align: center;
     font-size: 1rem;
 }
+
 .presentation-index-table__row{
     border: solid;
     border-color: $admin-title-color;
 }
+
 .presentation-index-table__case{
     border: solid;
     border-color: $admin-title-color;
     padding: 5px;
 }
+
 .presentation-index-table__button{
     color: $admin-title-color;
     font-weight: bold;
 }
+
 .presentation-index-table__button:hover{
     text-decoration: none;
     color: #00e1c8;
 }
+
 .presentation-index__create-button{
     width: 70%;
     padding: 8px;
@@ -52,6 +60,7 @@
     color:white;
     border-radius: 4px;
 }
+
 .presentation-index__create-button:hover{
     text-decoration: none;
     color: #00e1c8;
@@ -68,12 +77,14 @@
     color:white;
     font-size: 2rem;
 }
+
 .return-button-container{
     width:90%;
     margin:auto;
     display:flex;
     justify-content: center;
 }
+
 .presentation-add__return-button{
     width: 70%;
     padding: 8px;
@@ -84,6 +95,7 @@
     color:white;
     border-radius: 4px;
 }
+
 .presentation-add__return-button:hover{
     text-decoration: none;
     color: #00e1c8;
@@ -94,6 +106,7 @@
     width:90%;
     margin-left:5%;
 }
+
 .presentation__form-btn{
     width: 72%;
     padding: 8px;
@@ -106,6 +119,7 @@
     border-radius: 4px;
     border: none;
 }
+
 .presentation__form-btn:hover{
     text-decoration: none;
     color: #00e1c8;
@@ -121,21 +135,25 @@
     background-color: $admin-title-color;
     color:white;
 }
+
 .presentation-show__table{
     width: 90%;
     margin-left:5%;
     margin-bottom:10vh;
 }
+
 .presentation-show__table-case{
     border: solid;
     border-color: $admin-title-color;
     padding: 5px;
 }
+
 .presentation-show__buttons{
     display:flex;
     justify-content: space-around;
     margin-bottom: 5vh;
 }
+
 .presentation-show__button{
     width: 40%;
     padding: 8px;
@@ -146,14 +164,17 @@
     border-radius: 4px;
     border: none; 
 }
+
 .presentation-show__button:hover{
     text-decoration: none;
     color: #00e1c8; 
 }
+
 .delete-form{
     display: flex;
     margin-bottom: 10vh;
 }
+
 .delete-form__btn{
     width: 60%;
     margin-left: 20%;
@@ -165,10 +186,12 @@
     border-radius: 4px;
     border: none;
 }
+
 .delete-form__btn:hover{
     text-decoration: none;
     color: #00e1c8; 
 }
+
 
 // mise en forme de presentation_edit
 .presentation-edit__form{
@@ -178,6 +201,7 @@
     flex-direction: column;
     margin-bottom: 5vh;
 }
+
 .presentation-edit__button{
     width: 66%;
     margin-left:17%;
@@ -189,6 +213,7 @@
     border-radius: 4px;
     border: none; 
 }
+
 .presentation-edit__button:hover{
     text-decoration: none;
     color: #00e1c8; 
@@ -201,10 +226,12 @@
         margin-bottom: 10vh;
         font-size:3rem;
     }
+
     .presentation-index__column-title{
         text-align: center;
         font-size: 1.2rem;
     }
+
     .presentation-index__create-button{
         width: 20%;
         margin-left: 40%;
@@ -215,9 +242,11 @@
     .return-button-container{
         width:100%;
     }
+
     .presentation-add__return-button{
         width: 20%;
     }
+
     .presentation-add__return-button:hover{
         text-decoration: none;
         color: #00e1c8;
@@ -233,10 +262,12 @@
     .presentation-show__button{
         width: 20%;
     }
+
     .delete-form{
         width:90%;
         margin:auto;
     }
+
     .delete-form__btn{
         width: 20%;
         margin-left: 40%;
@@ -246,6 +277,7 @@
     .presentation-edit__form{
         justify-content: center;
     }
+    
     .presentation-edit__button{
         width: 20%;
         margin:auto;
