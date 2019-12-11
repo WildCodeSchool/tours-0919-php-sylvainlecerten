@@ -52,63 +52,84 @@
 body{
     margin: 0;
 }
-
+.presentation_section{
+    display: flex;
+    color: white;
+    background-color: black;
+}
 .who_am_i{
-    font-family: $titre_police;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
 }
 
 .sb_who_am_i{
-    font-family: $titre_police;
+    font-size: 2.4rem;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
 }
 
-.presentation_paragraph{
-    font-family: 'Hind Guntur', sans-serif;
-    font-size: 1.5rem;
+.presentation_intro{
+    width:100%;
+    min-height:38rem;
 }
-
-.presentation_img{
-    width: 12em;
-    height: 12em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-// destok version:
-
-@media (min-width: 676px){
-    // div 100% for title alignement
-    .presentation_intro{
-        width:100%;
-        min-height:80vh;
+// mobile version
+@media screen and (min-width: 150px) and (max-width: 678px) {
+    .who_am_i{
+        font-family: $titre_police;
+        font-size: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
     }
 
-    .presentation_section{
-        display: flex;
-        color: black;
+    .sb_who_am_i{
+        font-family: $titre_police;
+        text-align: center;
+        font-size: 2rem;
     }
 
-    // twig boucle presentation for column alignement
-    .presentations{
-        display: flex;
-        flex-direction: column;
-        width: 67%;
+    .presentation_paragraph{
+        font-family: 'Hind Guntur', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .presentation_img{
+        width: 12em;
+        height: 12em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .presentation_part{
         width:100%;
-        text-align: justify;
+        text-align: center;
+    }
+}
+// tablette version:
+
+@media (min-width: 679px){
+    // div 100% for title alignement
+    .who_am_i{
+        font-size: 4.5rem;
     }
 
+    .presentation_detail{
+        display:flex;
+        width: 100%;
+    }
     .presentation_img{
-        object-fit:cover;
-        margin-right:auto;
-        margin-left:auto;
-        width: 15%;
+        object-fit: cover;
+    }
+    .presentations{
+        width: 70%;
     }
 
+    /*
     .presentation_title{
         margin: 25px;
     }
@@ -130,25 +151,5 @@ body{
         flex-direction: row;
         width:100%;
         min-height:100vh;
-    }
-
-    // Physical size of title and sub title
-    .who_am_i{
-        margin-top: 80px;
-        margin-bottom: 80px;
-        margin-right: 150px;
-        margin-left: 50px;
-        font-size: 6rem;
-        text-align: right;
-    }
-
-    .sb_who_am_i{
-        font-size: 3rem;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        margin-right: 150px;
-        margin-left: 50px;
-        text-align: right;
-
-    }
+    }*/
 }
