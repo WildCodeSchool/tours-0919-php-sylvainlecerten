@@ -61,7 +61,26 @@ CREATE TABLE `presentation` (
 
 LOCK TABLES `presentation` WRITE;
 /*!40000 ALTER TABLE `presentation` DISABLE KEYS */;
-INSERT INTO `presentation` VALUES (1,'WHO AM I','Lorem ipsum dolor sit amet, consectetur adipiscing elit. ','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus felis, bibendum ut ultricies vel, fermentum non eros. Aliquam aliquet commodo sem, et laoreet ipsum pretium in. Donec laoreet dui in felis viverra aliquam. Fusce facilisis ultrices est, ac tristique lacus ultrices in. Aliquam a justo vitae felis congue finibus eget ac risus. Donec vitae tempor est. Vivamus nec blandit tortor. Donec sodales interdum ex, id convallis lectus condimentum id. Proin placerat ipsum at placerat suscipit. Curabitur euismod pellentesque purus sed fermentum. Ut elementum et ipsum sed vulputate. Fusce sollicitudin ultricies lorem, ac consequat ex iaculis auctor. Nullam neque felis, sollicitudin vel porta at, suscipit quis purus. Pellentesque efficitur felis lectus, nec commodo diam elementum quis. Aliquam aliquam quam ut sagittis faucibus. '),(2,'','','Nam aliquet sapien tempus vehicula dignissim. Praesent vel aliquam ipsum. Proin porttitor varius euismod. Etiam et elementum nisl. Vestibulum mattis sodales ullamcorper. Cras sodales a purus quis maximus. Morbi ipsum massa, aliquam eget commodo congue, ultrices quis mauris. Duis nec dui ullamcorper dolor feugiat suscipit. Donec blandit ante enim, vel facilisis est interdum vitae. Donec in suscipit turpis. Vestibulum cursus, magna non posuere tincidunt, diam sem aliquet felis, a lobortis mi mauris dapibus ex. Praesent at luctus leo, vestibulum ultrices ipsum. Morbi commodo aliquam quam, in laoreet ante consequat vitae. Nullam augue felis, suscipit sit amet nisl non, iaculis pulvinar ligula. Proin ac lorem faucibus mi cursus malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. '),(3,'','','Aliquam erat volutpat. Morbi vitae lectus interdum, tempor nibh sit amet, mollis lorem. Phasellus condimentum imperdiet leo, vel malesuada erat dapibus eu. Curabitur eget ligula eget ex accumsan facilisis. Vestibulum et auctor dui, eu finibus enim. In tempor est at libero interdum semper. Etiam ac elit sem. Vivamus mollis vitae velit quis varius. Nam ornare nibh ut sem egestas pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec consequat libero vitae consectetur sollicitudin. Phasellus pellentesque finibus mi quis aliquam. Nunc mollis nulla turpis, vitae suscipit justo hendrerit eget. Nulla eget mauris sed erat elementum placerat ac a velit. ');
+INSERT INTO `presentation` VALUES (1,'Qui c\'est ce mec ?','Qui est donc ce French Copywriter dont tout le monde parle mais que personne ne connaît vraiment ?' , 'Est-ce vraiment un mec ?'),
+(2,'','',' Il semblerait que oui.'),
+(3,'','','Tout ce que nous savons de lui, c\'est qu\'il est Français.'),
+(4,'','','Et qu\'il propose sa plume au plus offrant.'),
+(5,'','','Mais qui se cache derrière ce masque et ce pseudonyme ?'),
+(6,'','','Désolé'),
+(7,'','','Je ne vous dirai pas qui je suis.'),
+(8,'','','Éventuellement, je pourrais dévoiler ce que je peux faire - pour vous !'),
+(9,'','','Ça vous va ?'),
+(10,'Je suis né écrivain','Le premier mot qui est sorti de ma bouche fut "bibliothèque"','J\'ai appris à lire avant de savoir parler..'),
+(11,'','','J\'ai appris à écrire avant de commencer à marcher.'),
+(12,'','','J\'ai appris à taper au clavier avant de savoir me servir de ma fourchette.'),
+(13,'','','Et tout ce que je vous dit est vrai.'),
+(14,'','','Plus sérieusement, peu importe ce que j\'écris, fiction ou pas.'),
+(15,'','','Quel que soit le sujet, quel que soit votre objectif, ma mission est de trouver les bons mots.'),
+(16,'','','On peut dire que j\'aime jongler.'),
+(17,'','','Mais avec des mots plutôt qu\'avec des balles.'),
+(18,'','','Et parce que j\'adore manier les mots, j\'ai décidé d\'en faire mon métier.'),
+(19,'','','C\'est quand même mieux quand on aime ce qu\'on fait, n\'est-ce pas ?');
+
 /*!40000 ALTER TABLE `presentation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
