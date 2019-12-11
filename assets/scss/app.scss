@@ -69,8 +69,8 @@ body{
 }
 
 .presentation_img{
-    width: 20em;
-    height: 20em;
+    width: 12em;
+    height: 12em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -82,13 +82,12 @@ body{
     // div 100% for title alignement
     .presentation_intro{
         width:100%;
-        min-height:100vh;
+        min-height:80vh;
     }
 
     .presentation_section{
         display: flex;
-        background-color: black;
-        color:white;
+        color: black;
     }
 
     // twig boucle presentation for column alignement
@@ -104,11 +103,10 @@ body{
     }
 
     .presentation_img{
-        height: 100vh;
         object-fit:cover;
-        margin-right:0;
-        margin-left:0;
-        width: 33%;
+        margin-right:auto;
+        margin-left:auto;
+        width: 15%;
     }
 
     .presentation_title{
