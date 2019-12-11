@@ -15,12 +15,6 @@
     color: $link-is-hover;
 }
 
-// mobile
-.presentations
-{
-    margin: 1rem;
-}
-
 .navbar-nav{
     margin: 0.3em;
     font-family: 'Rufina', serif;
@@ -52,40 +46,19 @@
 body{
     margin: 0;
 }
+// ************************************************************************************************************************
+//*************************************************************************************************************************
+//mobile version
 
-.presentation_section{
-    display: flex;
-    color: white;
-    background-color: black;
-}
-
-.who_am_i{
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
-.sb_who_am_i{
-    font-size: 2.4rem;
-    margin-top: 80px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
-.presentation_intro{
-    width:100%;
-    min-height:38rem;
-}
-// mobile version
-@media screen and (min-width: 150px) and (max-width: 678px) {
+@media screen and (min-width: 150px) and (max-width: 414px) {
     .who_am_i{
         font-family: $titre_police;
         font-size: 3rem;
-        margin-top: 4rem;
-        margin-bottom: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
     }
 
     .sb_who_am_i{
@@ -111,13 +84,106 @@ body{
         width:100%;
         text-align: center;
     }
-}
-// tablette version:
 
-@media (min-width: 679px){
-    // div 100% for title alignement
+    .presentations
+    {
+        margin: 1rem;
+    }
+
+    .presentation_intro{
+        width:100%;
+        margin-bottom: 2em;
+    }
+    
+    .presentation_section{
+        display: flex;
+        color: white;
+        background-color: black;
+    }
+}
+//***************************************************************************************************************
+//***************************************************************************************************************
+//tablette version:
+
+@media (min-width: 415px) and (max-width: 1024px){
     .who_am_i{
         font-size: 4.5rem;
+        text-align: center;
+        margin: 1em;
+    }
+
+    .sb_who_am_i{
+        font-family: $titre_police;
+        text-align: center;
+        font-size: 3rem;
+        margin-top:1.5em;
+        margin-bottom: 1em;
+    }
+
+    .presentation_detail{
+        display: flex;
+    }
+
+    .presentation_paragraph{
+        font-family: 'Hind Guntur', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .presentation_img{
+        width: 12em;
+        height: 12em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .presentation_part{
+        width:100%;
+    }
+
+    .presentations
+    {
+        margin: 1rem;
+    }
+
+    .presentation_intro{
+        width:100%;
+        margin-bottom: 2em;
+    }
+    
+    .presentation_section{
+        display: flex;
+        color: white;
+        background-color: black;
+    }
+}
+
+@media (min-width: 1025px){
+    // div 100% for title alignement
+
+    .presentations{
+        width: 70%;
+        margin: 1rem;
+    }
+
+    .presentation_section{
+        background-color: black;
+        color: white;
+    }
+    
+    .who_am_i{
+        font-size: 4.5rem;
+        text-align: center;
+        margin: 1em;
+    }
+
+    .sb_who_am_i{
+        font-family: $titre_police;
+        text-align: center;
+        font-size: 3rem;
+        margin-top:1.5em;
+        margin-bottom: 1em;
     }
 
     .presentation_detail{
@@ -127,9 +193,19 @@ body{
 
     .presentation_img{
         object-fit: cover;
+        height: 20%;
+        width: 20%;
     }
 
-    .presentations{
-        width: 70%;
+    .presentation_title{
+        font-size: 3rem;
+    }
+
+    .presentation_subtitle{
+        font-size: 2rem;
+    }
+
+    .presentation_paragraph{
+        font-size: 1.3rem;
     }
 }
