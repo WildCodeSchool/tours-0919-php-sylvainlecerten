@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Partie Presentation{% endblock %}
+
+{% block body %}
+    <div class="presentation-index">
+        <h1 class="presentation-index__title">Partie Presentation :</h1>
+
+        <table class="presentation-index__table">
+            <thead>
+                <tr>
+                    <th class="presentation-index__column-title">Id</th>
+                    <th class="presentation-index__column-title">Titres</th>
+                    <th class="presentation-index__column-title">Sous-titres</th>
+                    <th class="presentation-index__column-title">Paragraphes</th>
+                    <th class="presentation-index__column-title">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for presentation in presentations %}
+                <tr class="presentation-index-table__row">
+                    <td class="presentation-index-table__case">{{ presentation.id }}</td>
+                    <td class="presentation-index-table__case">{{ presentation.title }}</td>
+                    <td class="presentation-index-table__case">{{ presentation.subtitle }}</td>
+                    <td class="presentation-index-table__case">{{ presentation.paragraph }}</td>
+                    <td class="presentation-index-table__case">
+                        <a class="presentation-index-table__button" href="{{ path('presentation_show', {'id': presentation.id}) }}">SHOW</a>
+                        <a class="presentation-index-table__button" href="{{ path('presentation_edit', {'id': presentation.id}) }}">EDIT</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a class= "presentation-index__create-button" href="{{ path('presentation_new') }}">Create new</a>
+    </div>
+{% endblock %}

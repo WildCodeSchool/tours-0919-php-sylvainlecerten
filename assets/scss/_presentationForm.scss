@@ -1,0 +1,285 @@
+// MISE EN FORME MOBILE JUSQU A 768PX INCLUS
+// mise en forme de presentation_index
+.presentation-index{
+    display:flex;
+    flex-direction: column;
+}
+
+.presentation-index__title{
+    width:100%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 5vh;
+    background-color: $admin-title-color;
+    color:white;
+    font-size: 2rem;
+}
+
+.presentation-index__table{
+    max-width:90%;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-bottom: 10vh;
+}
+
+.presentation-index__column-title{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.presentation-index-table__row{
+    border: solid;
+    border-color: $admin-title-color;
+}
+
+.presentation-index-table__case{
+    border: solid;
+    border-color: $admin-title-color;
+    padding: 5px;
+}
+
+.presentation-index-table__button{
+    color: $admin-title-color;
+    font-weight: bold;
+}
+
+.presentation-index-table__button:hover{
+    text-decoration: none;
+    color: #00e1c8;
+}
+
+.presentation-index__create-button{
+    width: 70%;
+    padding: 8px;
+    margin-left: 15%;
+    margin-bottom: 5vh;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $admin-title-color;
+    color:white;
+    border-radius: 4px;
+}
+
+.presentation-index__create-button:hover{
+    text-decoration: none;
+    color: #00e1c8;
+}
+
+// mise en forme de presentation_new
+.presentation-add__title{
+    width:100%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 10vh;
+    background-color: $admin-title-color;
+    color:white;
+    font-size: 2rem;
+}
+
+.return-button-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
+
+.presentation-add__return-button{
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $admin-title-color;
+    color:white;
+    border-radius: 4px;
+}
+
+.presentation-add__return-button:hover{
+    text-decoration: none;
+    color: #00e1c8;
+}
+
+// mise en forme de _form.html.twig
+.form-container{
+    width:90%;
+    margin-left:5%;
+}
+
+.presentation__form-btn{
+    width: 72%;
+    padding: 8px;
+    margin-left: 14%;
+    margin-bottom: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $admin-title-color;
+    color:white;
+    border-radius: 4px;
+    border: none;
+}
+
+.presentation__form-btn:hover{
+    text-decoration: none;
+    color: #00e1c8;
+}
+
+// mise en forme de presentation_show
+.presentation-show__title{
+    width:100%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 10vh;
+    background-color: $admin-title-color;
+    color:white;
+}
+
+.presentation-show__table{
+    width: 90%;
+    margin-left:5%;
+    margin-bottom:10vh;
+}
+
+.presentation-show__table-case{
+    border: solid;
+    border-color: $admin-title-color;
+    padding: 5px;
+}
+
+.presentation-show__buttons{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+}
+
+.presentation-show__button{
+    width: 40%;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $admin-title-color;
+    color:white;
+    border-radius: 4px;
+    border: none; 
+}
+
+.presentation-show__button:hover{
+    text-decoration: none;
+    color: #00e1c8; 
+}
+
+.delete-form{
+    display: flex;
+    margin-bottom: 10vh;
+}
+
+.delete-form__btn{
+    width: 60%;
+    margin-left: 20%;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $admin-title-color;
+    color:white;
+    border-radius: 4px;
+    border: none;
+}
+
+.delete-form__btn:hover{
+    text-decoration: none;
+    color: #00e1c8; 
+}
+
+
+// mise en forme de presentation_edit
+.presentation-edit__form{
+    width: 90%;
+    margin-left:5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.presentation-edit__button{
+    width: 66%;
+    margin-left:17%;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $admin-title-color;
+    color:white;
+    border-radius: 4px;
+    border: none; 
+}
+
+.presentation-edit__button:hover{
+    text-decoration: none;
+    color: #00e1c8; 
+}
+
+//VERSION DESKTOP A PARTIR 769PX
+@media screen and (min-width:769px){
+    // mise en forme de presentation_index
+    .presentation-index__title{
+        margin-bottom: 10vh;
+        font-size:3rem;
+    }
+
+    .presentation-index__column-title{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .presentation-index__create-button{
+        width: 20%;
+        margin-left: 40%;
+        margin-bottom: 10vh;
+    }
+
+    // mise en forme de presentation_new
+    .return-button-container{
+        width:100%;
+    }
+
+    .presentation-add__return-button{
+        width: 20%;
+    }
+
+    .presentation-add__return-button:hover{
+        text-decoration: none;
+        color: #00e1c8;
+    }
+
+    // mise en forme de _form.html.twig
+    .presentation__form-btn{
+        width: 20%;
+        margin-left: 40%;
+    }
+
+    // mise en forme de presentation_show
+    .presentation-show__button{
+        width: 20%;
+    }
+
+    .delete-form{
+        width:90%;
+        margin:auto;
+    }
+
+    .delete-form__btn{
+        width: 20%;
+        margin-left: 40%;
+    }
+
+    // mise en forme de presentation_edit
+    .presentation-edit__form{
+        justify-content: center;
+    }
+
+    .presentation-edit__button{
+        width: 20%;
+        margin:auto;
+    }
+}
