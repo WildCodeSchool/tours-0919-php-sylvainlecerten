@@ -51,6 +51,10 @@ body{
     font-family: $text_police;
 }
 
+.presentation_intro{
+    font-family: titre_police;
+}
+
 // ************************************************************************************************************************
 //*************************************************************************************************************************
 //mobile version
@@ -126,7 +130,6 @@ body{
     }
 
     .presentation_paragraph{
-        font-family: 'Hind Guntur', sans-serif;
         font-size: 1.5rem;
     }
 
@@ -180,7 +183,6 @@ body{
     }
 
     .sb_who_am_i{
-        font-family: $titre_police;
         text-align: center;
         font-size: 3rem;
         margin-top:1.5em;
