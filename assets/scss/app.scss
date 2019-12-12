@@ -17,7 +17,7 @@
 
 .navbar-nav{
     margin: 0.3em;
-    font-family: 'Rufina', serif;
+    font-family: $titre_police;
 }
 
 //footer link list
@@ -40,19 +40,27 @@
     margin: 1em;
     padding-right: 1rem;
     padding-left: 1rem;
-    font-family: 'Rufina', serif;
+    font-family: $titre_police;
 }
 
 body{
     margin: 0;
 }
+
+.presentation_part{
+    font-family: $text_police;
+}
+
+.presentation_intro{
+    font-family: titre_police;
+}
+
 // ************************************************************************************************************************
 //*************************************************************************************************************************
 //mobile version
 
 @media screen and (min-width: 150px) and (max-width: 414px) {
     .who_am_i{
-        font-family: $titre_police;
         font-size: 3rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -62,13 +70,11 @@ body{
     }
 
     .sb_who_am_i{
-        font-family: $titre_police;
         text-align: center;
         font-size: 2rem;
     }
 
     .presentation_paragraph{
-        font-family: 'Hind Guntur', sans-serif;
         font-size: 1.5rem;
     }
 
@@ -113,7 +119,6 @@ body{
     }
 
     .sb_who_am_i{
-        font-family: $titre_police;
         text-align: center;
         font-size: 3rem;
         margin-top:1.5em;
@@ -125,7 +130,6 @@ body{
     }
 
     .presentation_paragraph{
-        font-family: 'Hind Guntur', sans-serif;
         font-size: 1.5rem;
     }
 
@@ -179,7 +183,6 @@ body{
     }
 
     .sb_who_am_i{
-        font-family: $titre_police;
         text-align: center;
         font-size: 3rem;
         margin-top:1.5em;
