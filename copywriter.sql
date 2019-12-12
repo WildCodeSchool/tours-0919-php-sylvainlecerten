@@ -35,7 +35,7 @@ CREATE TABLE `migration_versions` (
 
 LOCK TABLES `migration_versions` WRITE;
 /*!40000 ALTER TABLE `migration_versions` DISABLE KEYS */;
-INSERT INTO `migration_versions` VALUES ('20191204102854','2019-12-04 13:26:27');
+INSERT INTO `migration_versions` VALUES ('20191204102854','2019-12-04 13:26:27'),('20191212153516','2019-12-12 15:39:11');
 /*!40000 ALTER TABLE `migration_versions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,9 +50,9 @@ CREATE TABLE `presentation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `subtitle` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `paragraph` longtext COLLATE utf8mb4_unicode_ci,
+  `paragraph` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,27 +61,34 @@ CREATE TABLE `presentation` (
 
 LOCK TABLES `presentation` WRITE;
 /*!40000 ALTER TABLE `presentation` DISABLE KEYS */;
-INSERT INTO `presentation` VALUES (1,'Qui c\'est ce mec ?','Qui est donc ce French Copywriter dont tout le monde parle mais que personne ne connaît vraiment ?' , 'Est-ce vraiment un mec ?'),
-(2,'','',' Il semblerait que oui.'),
-(3,'','','Tout ce que nous savons de lui, c\'est qu\'il est Français.'),
-(4,'','','Et qu\'il propose sa plume au plus offrant.'),
-(5,'','','Mais qui se cache derrière ce masque et ce pseudonyme ?'),
-(6,'','','Désolé'),
-(7,'','','Je ne vous dirai pas qui je suis.'),
-(8,'','','Éventuellement, je pourrais dévoiler ce que je peux faire - pour vous !'),
-(9,'','','Ça vous va ?'),
-(10,'Je suis né écrivain','Le premier mot qui est sorti de ma bouche fut "bibliothèque"','J\'ai appris à lire avant de savoir parler..'),
-(11,'','','J\'ai appris à écrire avant de commencer à marcher.'),
-(12,'','','J\'ai appris à taper au clavier avant de savoir me servir de ma fourchette.'),
-(13,'','','Et tout ce que je vous dit est vrai.'),
-(14,'','','Plus sérieusement, peu importe ce que j\'écris, fiction ou pas.'),
-(15,'','','Quel que soit le sujet, quel que soit votre objectif, ma mission est de trouver les bons mots.'),
-(16,'','','On peut dire que j\'aime jongler.'),
-(17,'','','Mais avec des mots plutôt qu\'avec des balles.'),
-(18,'','','Et parce que j\'adore manier les mots, j\'ai décidé d\'en faire mon métier.'),
-(19,'','','C\'est quand même mieux quand on aime ce qu\'on fait, n\'est-ce pas ?');
-
+INSERT INTO `presentation` VALUES (1,'Qui c\'est ce mec ?','Qui est donc ce French Copywriter dont tout le monde parle mais que personne ne connaît vraiment ?','Est-ce vraiment un mec ?'),(2,'','',' Il semblerait que oui.'),(3,'','','Tout ce que nous savons de lui, c\'est qu\'il est Français.'),(4,'','','Et qu\'il propose sa plume au plus offrant.'),(5,'','','Mais qui se cache derrière ce masque et ce pseudonyme ?'),(6,'','','Désolé'),(7,'','','Je ne vous dirai pas qui je suis.'),(8,'','','Éventuellement, je pourrais dévoiler ce que je peux faire - pour vous !'),(9,'','','Ça vous va ?'),(10,'Je suis né écrivain','Le premier mot qui est sorti de ma bouche fut \"bibliothèque\"','J\'ai appris à lire avant de savoir parler..'),(11,'','','J\'ai appris à écrire avant de commencer à marcher.'),(12,'','','J\'ai appris à taper au clavier avant de savoir me servir de ma fourchette.'),(13,'','','Et tout ce que je vous dit est vrai.'),(14,'','','Plus sérieusement, peu importe ce que j\'écris, fiction ou pas.'),(15,'','','Quel que soit le sujet, quel que soit votre objectif, ma mission est de trouver les bons mots.'),(16,'','','On peut dire que j\'aime jongler.'),(17,'','','Mais avec des mots plutôt qu\'avec des balles.'),(18,'','','Et parce que j\'adore manier les mots, j\'ai décidé d\'en faire mon métier.'),(19,'','','C\'est quand même mieux quand on aime ce qu\'on fait, n\'est-ce pas ?');
 /*!40000 ALTER TABLE `presentation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `roles` json NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -93,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-04 14:48:27
+-- Dump completed on 2019-12-12 16:44:19
