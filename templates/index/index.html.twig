@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Who AmI ?
+{% endblock %}
+
+{% block body %}
+    <section class="presentation_intro">
+        <h1 class="who_am_i">The French Copywriter</h1>
+        <h2 class="sb_who_am_i">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</h2>
+    </section>
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <img src="images/chibi.jpeg" class="presentation_img" alt="illustration">
+            <div class="presentations">
+                {% for whoAmIContent in whoAmIContents %}
+                    <div class="presentation_part">
+                        {% if whoAmIContent.type == 'title' %}
+                        <h2 class="presentation_title">{{ whoAmIContent.value }}</h2>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'subtitle' %}
+                        <h3 class="presentation_subtitle">{{ whoAmIContent.value }}</h3>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'paragraph' %}
+                        <p class="presentation_paragraph">{{ whoAmIContent.value }}</p>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'image' %}
+                        <img src="{{ whoAmIContent.value }}" alt="Image de présentation" />
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="presentation_section white">
+        <div class="presentation_detail">
+            <div class="presentations">
+                {% for presentationContent in presentationContents %}
+                    <div class="presentation_part">
+                        {% if presentationContent.type == 'title' %}
+                        <h2 class="presentation_title">{{ presentationContent.value }}</h2>
+                        {% endif %}
+                        {% if presentationContent.type == 'subtitle' %}
+                        <h3 class="presentation_subtitle">{{ presentationContent.value }}</h3>
+                        {% endif %}
+                        {% if presentationContent.type == 'paragraph' %}
+                        <p class="presentation_paragraph">{{ presentationContent.value }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
