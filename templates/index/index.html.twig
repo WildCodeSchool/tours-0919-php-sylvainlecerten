@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Who AmI ?
+{% endblock %}
+
+{% block body %}
+    <section class="presentation_intro">
+        <h1 class="who_am_i">The French Copywriter</h1>
+        <h2 class="sb_who_am_i">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</h2>
+    </section>
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <img src="images/chibi.jpeg" class="presentation_img" alt="illustration">
+            <div class="presentations">
+                {% for whoAmIContent in whoAmIContents %}
+                    <div class="presentation_part">
+                        {% if whoAmIContent.type == 'title' %}
+                        <h2 class="presentation_title">{{ whoAmIContent.value }}</h2>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'subtitle' %}
+                        <h3 class="presentation_subtitle">{{ whoAmIContent.value }}</h3>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'paragraph' %}
+                        <p class="presentation_paragraph">{{ whoAmIContent.value }}</p>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'image' %}
+                        <img src="{{ whoAmIContent.value }}" alt="Image de présentation" />
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="presentation_section white">
+        <div class="presentation_detail">
+            <div class="presentations">
+                {% for presentationContent in presentationContents %}
+                    <div class="presentation_part">
+                        {% if presentationContent.type == 'title' %}
+                        <h2 class="presentation_title">{{ presentationContent.value }}</h2>
+                        {% endif %}
+                        {% if presentationContent.type == 'subtitle' %}
+                        <h3 class="presentation_subtitle">{{ presentationContent.value }}</h3>
+                        {% endif %}
+                        {% if presentationContent.type == 'paragraph' %}
+                        <p class="presentation_paragraph">{{ presentationContent.value }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="centrage-services">Services</h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body" class"color-fond-card">
+                        <h5 class="card-title">service 1</h5>
+                        <p class="card-text">Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">service 2</h5>
+                        <p class="card-text">Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">service 3</h5>
+                        <p class="card-text">Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">service 4</h5>
+                        <p class="card-text">Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">service 5</h5>
+                        <p class="card-text">Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">service 6</h5>
+                        <p class="card-text">Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem videtur, inermis ac nudus est. tollit definitiones, nihil de dividendo ac partiendo docet,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

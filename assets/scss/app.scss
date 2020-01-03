@@ -43,6 +43,14 @@
     font-family: $titre_police;
 }
 
+.box_service_row{
+    display: flex;
+}
+
+.card{
+    display: flex;
+}
+
 body{
     margin: 0;
 }
@@ -53,6 +61,11 @@ body{
 
 .presentation_intro{
     font-family: titre_police;
+}
+
+.presentation_section.white {
+    background-color: white;
+    color: black;
 }
 
 // ************************************************************************************************************************
