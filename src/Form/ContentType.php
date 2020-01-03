@@ -2,19 +2,20 @@
 
 namespace App\Form;
 
-use App\Entity\Presentation;
+use App\Entity\Content;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PresentationType extends AbstractType
+class ContentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('subtitle')
-            ->add('paragraph')
+            ->add('type')
+            ->add('value')
+            ->add('category')
+            ->add('ordering')
         ;
         $options;
     }
@@ -22,7 +23,7 @@ class PresentationType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Presentation::class,
+            'data_class' => Content::class,
         ]);
     }
 }
