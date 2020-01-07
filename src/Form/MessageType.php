@@ -13,12 +13,12 @@ class MessageType extends AbstractType
     {
         $options;
         $builder
-            ->add('Prenom')
-            ->add('Nom')
-            ->add('Societe')
-            ->add('Message')
-            ->add('Telephone')
-            ->add('Email')
+            ->add('Prenom', null, array('label' => false))
+            ->add('Nom', null, array('label' => false))
+            ->add('Societe', null, array('label' => false))
+            ->add('Message', null, array('label' => false))
+            ->add('Telephone', null, array('label' => false))
+            ->add('Email', null, array('label' => false))
         ;
     }
 

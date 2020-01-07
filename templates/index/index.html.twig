@@ -110,10 +110,34 @@
             </div>
         </div>
     </section>
-    <section>
-        {{ form_start(form) }}
-            {{ form_row(form) }}
-            <button type="submit" name="btnSearch">Envoyer</button>
+    <section class="contact">
+        <h2>Des questions ?</h2>
+        {{ form_start(form, {'attr':{'class':'contact-form'}}) }}
+            <p class="contact-form_title">Bonjour !</p>
+            <div class = "contact-form_text">
+                <div class="contact-form-text_paragraph"
+                    <p class="contact-form_part">Je m'appelle </p>
+                    {{ form_row(form.Prenom, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre prénom'}}) }}
+                    {{ form_row(form.Nom, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre nom'}}) }}
+                    <p class="contact-form_part">. Je fais partie de la société </p>
+                    {{ form_row(form.Societe, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre société'}}) }}
+                    <p>.</p>
+                </div>
+                <div class="contact-form-text_paragraph"
+                    <p class="contact-form_part">Je souhaiterai </p>
+                    {{ form_row(form.Message, {'attr':{'class':'contact-form_input contact-form_part contact-form_message', 'placeholder':'Votre demande'}}) }}
+                    <p>.</p>
+                </div>
+                <div class="contact-form-text_paragraph"
+                    <p>Merci de me recontacter au </p>
+                    {{ form_row(form.Telephone, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre téléphone'}}) }}
+                    <p class="contact-form_part"> ou par mail : </p>
+                    {{ form_row(form.Email, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre e-mail'}}) }}
+                    <p>. </p>
+                    <p class="contact-form_part">Merci ! A bientôt !</p>
+                </div>
+            </div>
+            <button class="contact-form_submit-button" type="submit" name="btnSearch">Envoyer</button>
         {{ form_end(form) }}
     </section>
 {% endblock %}
