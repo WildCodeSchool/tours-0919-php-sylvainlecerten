@@ -45,14 +45,6 @@
     font-family: $titre_police;
 }
 
-.box_service_row{
-    display: flex;
-}
-
-.card{
-    display: flex;
-}
-
 body{
     margin: 0;
 }
@@ -68,6 +60,18 @@ body{
 .presentation_section.white {
     background-color: white;
     color: black;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap:wrap;
+    margin: 1rem;
+}
+
+.service-card{
+    display:flex;
+    flex-direction: column;
+    width:33.33%;
 }
 
 // ************************************************************************************************************************
@@ -121,7 +125,21 @@ body{
         color: white;
         background-color: black;
     }
+
+    .service-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+
 }
+
+
 //***************************************************************************************************************
 //***************************************************************************************************************
 //tablette version:
@@ -177,6 +195,9 @@ body{
         background-color: black;
     }
 }
+
+
+
 
 @media (min-width: 1025px){
     // div 100% for title alignement
