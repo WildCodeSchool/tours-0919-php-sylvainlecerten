@@ -51,18 +51,12 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class = "box_service">
-            {% for service in services %}
-                <div class ="box_service_titre_paragraphe">
-                    <div class = "box_service_title">
-                        <h1 class="centrage-services">{{service.title}}</h1>
-                    </div>
-                    <div class ="box_service_paragraphe">
-                        <p class="card-text">{{service.description}}</p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+    <section class="service-container">
+        {% for service in services %}
+            <div class="service-card">
+                <h1 class="service-title">{{service.title}}</h1>
+                <p class="service-detail">{{service.description}}</p>
+            </div>
+        {% endfor %}
     </section>
 {% endblock %}
