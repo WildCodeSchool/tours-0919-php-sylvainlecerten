@@ -47,8 +47,8 @@ class IndexController extends AbstractController
         return $this->render('index/index.html.twig', [
             'whoAmIContents' => $whoAmIContents,
             'presentationContents' => $presentationContents,
-            'services' => $services
-            'form' => $form->createView(),
+            'services' => $services,
+            'form' => $form->createView()
         ]);
     }
     //page de redirection suite à validation du formulaire de contact
