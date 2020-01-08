@@ -9,11 +9,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Message;
 use App\Entity\Newsletter;
 use App\Form\NewsletterType;
-use App\Entity\Service;
 use App\Repository\ServiceRepository;
 use App\Repository\ContentRepository;
 use App\Form\MessageType;
-use App\Entity\Message;
 
 class IndexController extends AbstractController
 {
