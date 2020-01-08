@@ -4,6 +4,7 @@
     width: 100%;
     display: flex;
 }
+
 .message-index_link{
     font-size: 2rem;
     padding:1rem;
@@ -14,9 +15,11 @@
     margin:auto;
     text-align: center;
 }
+
 .message-index_link:hover{
     text-decoration: none;
 }
+
 // mise en forme de presentation_index
 .presentation-index{
     display:flex;

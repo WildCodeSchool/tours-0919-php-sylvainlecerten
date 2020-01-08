@@ -8,6 +8,7 @@
     margin-bottom: 1rem;
     text-align: center;
 }
+
 .response_paragraph{
     margin:auto;
     font-family:$titre_police;
@@ -15,6 +16,7 @@
     font-size: 1.5rem;
     margin: 1rem;
 }
+
 @media screen and (min-width:769px){
     .response{
         width: 60%;
@@ -23,6 +25,7 @@
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
+
     .response_paragraph{
         margin:auto;
         font-family:$titre_police;
