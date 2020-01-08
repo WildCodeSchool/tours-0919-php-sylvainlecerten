@@ -141,4 +141,11 @@
             <button class="contact-form_submit-button" >{{ button_label|default('Envoyer') }}</button>
         {{ form_end(form) }}
     </section>
+    <section class="newsletter">
+        <p class="newsletter-intro">Pour rester informé, abonnez-vous à la newsletter de votre copywriter préféré !</p>
+        {{ form_start(formNews)}}
+            {{ form_row(formNews.email, {'attr':{'class':'newsletter-form_input', 'placeholder':'Saisissez votre e-mail ici'}}) }}
+            <button class="contact-form_submit-button" >{{ button_label|default('S\'abonner') }}</button>
+        {{ form_end(formNews) }}
+    </section>
 {% endblock %}
