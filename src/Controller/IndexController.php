@@ -12,14 +12,14 @@ use App\Repository\ServiceRepository;
 use App\Repository\ContentRepository;
 use App\Repository\MessageRepository;
 use App\Form\MessageType;
+use App\Entity\Message;
 
 class IndexController extends AbstractController
 {
     /**
     * @Route("/", name="app_index")
     */
-  
-    public function index(ContentRepository $contentRepository, ServiceRepository $serviceRepository) :Response
+    public function index(ContentRepository $contentRepository, ServiceRepository $serviceRepository, Request $request) :Response
     {
         $whoAmIContents = $contentRepository->findBy(
             ['category' => 'whoami'],
