@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle adresse e-mail{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un e-mail</h1>
+
+    {{ include('newsletter/_form.html.twig') }}
+
+    <a href="{{ path('newsletter_index') }}">Retour à la liste</a>
+{% endblock %}

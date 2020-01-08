@@ -5,18 +5,20 @@
 {% block body %}
     <div class="message-link_container">
         <a class="message-index_link" href="{{ path('message_index') }}">Vers les messages reçus</a>
+        <a class="message-index_link" href="{{ path('newsletter_index') }}">Vers les abonnés newsletter</a>
+
     </div>
-    <h1>Content index</h1>
+    <h1>Contenus</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Type</th>
-                <th>Value</th>
-                <th>Category</th>
-                <th>Ordering</th>
-                <th>actions</th>
+                <th>Valeur</th>
+                <th>Categorie</th>
+                <th>Ordre</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -28,8 +30,8 @@
                 <td>{{ content.category }}</td>
                 <td>{{ content.ordering }}</td>
                 <td>
-                    <a href="{{ path('content_show', {'id': content.id}) }}">show</a>
-                    <a href="{{ path('content_edit', {'id': content.id}) }}">edit</a>
+                    <a href="{{ path('content_show', {'id': content.id}) }}">Voir</a>
+                    <a href="{{ path('content_edit', {'id': content.id}) }}">Editer</a>
                 </td>
             </tr>
         {% else %}
@@ -40,5 +42,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('content_new') }}">Create new</a>
+    <a href="{{ path('content_new') }}">Nouveau</a>
 {% endblock %}

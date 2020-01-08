@@ -6,13 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Content;
-use App\Entity\Service;
+use App\Entity\Message;
+use App\Entity\Newsletter;
+use App\Form\NewsletterType;
 use App\Repository\ServiceRepository;
 use App\Repository\ContentRepository;
-use App\Repository\MessageRepository;
 use App\Form\MessageType;
-use App\Entity\Message;
 
 class IndexController extends AbstractController
 {
@@ -45,13 +44,27 @@ class IndexController extends AbstractController
             return $this->redirectToRoute('contact-form-response');
         }
 
+        // Formulaire newsletter
+        $newsletter=new Newsletter();
+        $formNews = $this->createForm(NewsletterType::class, $newsletter);
+        $formNews->handleRequest($request);
+
+        if ($formNews->isSubmitted() && $formNews->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($newsletter);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('newsletter-form-response');
+        }
+      
         $services = $serviceRepository->findAll();
 
         return $this->render('index/index.html.twig', [
             'whoAmIContents' => $whoAmIContents,
             'presentationContents' => $presentationContents,
+            'form' => $form->createView(),
+            'formNews' => $formNews->createView(),
             'services' => $services,
-            'form' => $form->createView()
         ]);
     }
     //page de redirection suite à validation du formulaire de contact
@@ -61,5 +74,14 @@ class IndexController extends AbstractController
     public function contactSent()
     {
         return $this->render('index/contact_sent.html.twig');
+    }
+
+    //page de redirection suite à abonnement à la newsletter
+    /**
+    * @Route("/submitted", name="newsletter-form-response")
+    */
+    public function newsletterSent()
+    {
+        return $this->render('index/newsletter_ok.html.twig');
     }
 }

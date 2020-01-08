@@ -1,0 +1,30 @@
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    background-color: $clear-part_color;
+}
+
+.newsletter-intro{
+    font-family: $titre_police;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+    margin:auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form_input{
+    width:80%;
+    margin-left: 10%;
+}
+
+@media screen and (min-width:769px){
+    .newsletter-intro{
+        font-size: 1.5rem;;
+    }
+
+    .newsletter-form_input{
+        width: 60%;
+    }
+}
