@@ -27,7 +27,7 @@ class IndexController extends AbstractController
             ['category' => 'presentation'],
             ['ordering' => 'ASC']
         );
-
+        // Formulaire de contact
         $message=new Message();
         $form = $this->createForm(MessageType::class, $message);
         $form->handleRequest($request);
@@ -37,7 +37,7 @@ class IndexController extends AbstractController
             $entityManager->persist($message);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_index');
+            return $this->redirectToRoute('contact-form-response');
         }
 
         return $this->render('index/index.html.twig', [
@@ -45,5 +45,13 @@ class IndexController extends AbstractController
             'presentationContents' => $presentationContents,
             'form' => $form->createView(),
         ]);
+    }
+    //page de redirection suite à validation du formulaire de contact
+    /**
+    * @Route("/sent", name="contact-form-response")
+    */
+    public function contactSent()
+    {
+        return $this->render('index/contact_sent.html.twig');
     }
 }

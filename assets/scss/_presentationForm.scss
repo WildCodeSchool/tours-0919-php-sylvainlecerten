@@ -1,4 +1,22 @@
 // MISE EN FORME MOBILE JUSQU A 768PX INCLUS
+//MISE EN FORME LIEN VERS L4ADMINISTRATION DES MESSAGES RECUS
+.message-link_container{
+    width: 100%;
+    display: flex;
+}
+.message-index_link{
+    font-size: 2rem;
+    padding:1rem;
+    background-color: rgb(37, 144, 189);
+    color:white;
+    border-radius: 5px;
+    width: 50%;
+    margin:auto;
+    text-align: center;
+}
+.message-index_link:hover{
+    text-decoration: none;
+}
 // mise en forme de presentation_index
 .presentation-index{
     display:flex;
