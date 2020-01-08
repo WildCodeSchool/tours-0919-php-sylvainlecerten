@@ -9,18 +9,24 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Content;
 use App\Entity\Message;
 use App\Entity\Newsletter;
+use App\Form\NewsletterType;
+use App\Entity\Service;
+use App\Repository\ServiceRepository;
 use App\Repository\ContentRepository;
 use App\Repository\MessageRepository;
 use App\Form\MessageType;
-use App\Form\NewsletterType;
+use App\Entity\Message;
 
 class IndexController extends AbstractController
 {
     /**
     * @Route("/", name="app_index")
     */
-    public function index(ContentRepository $contentRepository, Request $request) :Response
-    {
+    public function index(
+        ContentRepository $contentRepository,
+        ServiceRepository $serviceRepository,
+        Request $request
+    ):Response {
         $whoAmIContents = $contentRepository->findBy(
             ['category' => 'whoami'],
             ['ordering' => 'ASC']
@@ -54,12 +60,15 @@ class IndexController extends AbstractController
 
             return $this->redirectToRoute('newsletter-form-response');
         }
+      
+        $services = $serviceRepository->findAll();
 
         return $this->render('index/index.html.twig', [
             'whoAmIContents' => $whoAmIContents,
             'presentationContents' => $presentationContents,
             'form' => $form->createView(),
             'formNews' => $formNews->createView(),
+            'services' => $services,
         ]);
     }
     //page de redirection suite à validation du formulaire de contact
