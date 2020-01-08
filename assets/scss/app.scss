@@ -43,14 +43,6 @@
     font-family: $titre_police;
 }
 
-.box_service_row{
-    display: flex;
-}
-
-.card{
-    display: flex;
-}
-
 body{
     margin: 0;
 }
@@ -68,23 +60,15 @@ body{
     color: black;
 }
 
-.box_service {
-    display: flex;
-    width: 100%;
-}
-
-.box_service_titre_paragraphe{
-    width: 80%;
-}
-
 .service-container{
     display: flex;
     flex-wrap:wrap;
+    margin: 1rem;
 }
 .service-card{
     display:flex;
     flex-direction: column;
-    width:30%;
+    width:33.33%;
 }
 
 // ************************************************************************************************************************
@@ -137,6 +121,15 @@ body{
         display: flex;
         color: white;
         background-color: black;
+    }
+    .service-container{
+    display: flex;
+    flex-direction: column;
+    }
+    .service-card{
+    display:flex;
+    flex-direction: column;
+    width:100%;
     }
 
 }
