@@ -19,8 +19,11 @@ class IndexController extends AbstractController
     /**
     * @Route("/", name="app_index")
     */
-    public function index(ContentRepository $contentRepository, ServiceRepository $serviceRepository, Request $request) :Response
-    {
+    public function index(
+        ContentRepository $contentRepository,
+        ServiceRepository $serviceRepository,
+        Request $request
+    ):Response {
         $whoAmIContents = $contentRepository->findBy(
             ['category' => 'whoami'],
             ['ordering' => 'ASC']
