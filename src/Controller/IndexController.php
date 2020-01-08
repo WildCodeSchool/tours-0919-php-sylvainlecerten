@@ -6,11 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Content;
 use App\Entity\Message;
 use App\Entity\Newsletter;
 use App\Repository\ContentRepository;
-use App\Repository\MessageRepository;
 use App\Form\MessageType;
 use App\Form\NewsletterType;
 
