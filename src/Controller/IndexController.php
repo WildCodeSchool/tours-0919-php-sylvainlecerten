@@ -27,10 +27,12 @@ class IndexController extends AbstractController
             ['category' => 'whoami'],
             ['ordering' => 'ASC']
         );
+
         $presentationContents = $contentRepository->findBy(
             ['category' => 'presentation'],
             ['ordering' => 'ASC']
         );
+
         // Formulaire de contact
         $message=new Message();
         $form = $this->createForm(MessageType::class, $message);
@@ -56,7 +58,7 @@ class IndexController extends AbstractController
 
             return $this->redirectToRoute('newsletter-form-response');
         }
-      
+
         $services = $serviceRepository->findAll();
 
         return $this->render('index/index.html.twig', [
