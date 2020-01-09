@@ -4,6 +4,13 @@
         <div class= "box-footer">
             <li class="nav-lifooter"><a class="footer_link" href="#">Mentions légales</a></li>
             <li class="nav-lifooter"><a class="footer_link" href="#">Newsletter</a></li>
+            {% if app.user %}
+                {{ app.user.email }}
+                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_logout') }}"> Se déconnecter</a>
+                {% else %}
+                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_login') }}"> Se connecter</a>
+            </li>
+            {% endif %}
         </div>
     </ul>
 {% endblock %}
