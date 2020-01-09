@@ -5,6 +5,8 @@
 
 .contact-form_title{
     color: $section-title-color;
+    font-family: $titre_police;
+    font-size: 2rem;
     margin-left: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -60,6 +62,7 @@
 
 @media screen and (min-width:769px){
     .contact-form_title{
+        font-size: 4rem;
         margin-left: 3rem;
         padding-top: 3rem;
         padding-bottom: 3rem;

@@ -1,0 +1,76 @@
+.presentation_section{
+    display: flex;
+    color: white;
+    background-color: $dark-part_color;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.presentation_part{
+    font-family: $text_police;
+    width:100%;
+    text-align: center;
+}
+
+.presentations{
+    margin: 1rem;
+}
+
+.presentation_img{
+    width:80%;
+    margin:10%;
+}
+.presentation_title{
+    font-size: 2rem;
+    color: $section-title-color;
+}
+
+.presentation_subtitle{
+    font-size: 1.2rem;
+}
+
+.presentation_paragraph{
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+@media screen and (min-width:769px){
+    .presentation-section{
+        padding-top: 0px;
+    }
+
+    .presentation_detail{
+        display: flex;
+        width:100%;
+    }
+    .presentations{
+        width: 60%;
+        margin-top: 8rem;
+    }
+
+    .presentation_title{
+        font-size: 4rem;
+        color: $section-title-color;
+    }
+
+    .presentation_subtitle{
+        font-size: 1.8rem;
+    }
+
+    .presentation_paragraph{
+        font-size: 1.5rem;
+    }
+
+    .presentation_img{
+        object-fit: cover;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .presentation_part{
+        width:100%;
+    }
+}
