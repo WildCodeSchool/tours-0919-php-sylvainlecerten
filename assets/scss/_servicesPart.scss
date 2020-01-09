@@ -17,10 +17,8 @@
     flex-direction: column;
     width:90%;
     margin: auto;
-    border:solid;
-    border-color: $section-title-color;
-    border-radius: 8px;
-    box-shadow: 1px 1px 1px grey;
+    border-bottom-right-radius: 10px;
+    box-shadow: 2px 2px 2px $section-title_color;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -73,5 +71,4 @@
     .service-detail{
         font-size: 1.5rem;
     }
-
 }
