@@ -1,0 +1,45 @@
+.presentation_intro{
+    display:flex;
+    flex-direction: column;
+    font-family: titre_police;
+    background-color: $clear-part_color;
+    width: 100%;
+    height: 80vh;
+}
+
+.who_am_i{
+    color: $section-title-color;
+    font-size: 3rem;
+    text-align: center;
+    width:80%;
+    margin-left:10%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.sb_who_am_i{
+    font-size: 1.5rem;
+    text-align: center;
+    width:80%;
+    margin-left:10%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width:769px){
+    .who_am_i{
+        color: $section-title-color;
+        font-size: 5rem;
+        text-align: center;
+        width:80%;
+        margin-left:10%;
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    .sb_who_am_i{
+        font-size: 3rem;
+        margin-top:1.5em;
+        margin-bottom: 1em;
+    }
+}

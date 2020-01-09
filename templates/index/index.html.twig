@@ -24,15 +24,12 @@
                         {% if whoAmIContent.type == 'paragraph' %}
                         <p class="presentation_paragraph">{{ whoAmIContent.value }}</p>
                         {% endif %}
-                        {% if whoAmIContent.type == 'image' %}
-                        <img src="{{ whoAmIContent.value }}" alt="Image de présentation" />
-                        {% endif %}
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
-    <section class="presentation_section white">
+    <section class="presentation_section">
         <div class="presentation_detail">
             <div class="presentations">
                 {% for presentationContent in presentationContents %}
@@ -49,15 +46,19 @@
                     </div>
                 {% endfor %}
             </div>
+            <img src="images/chibi.jpeg" class="presentation_img" alt="illustration">
         </div>
     </section>
-    <section class="service-container">
-        {% for service in services %}
-            <div class="service-card">
-                <h1 class="service-title">{{service.title}}</h1>
-                <p class="service-detail">{{service.description}}</p>
-            </div>
-        {% endfor %}
+    <section class="service-section">
+        <h2 class="services_title">Ce que je peux faire pour vous</h2>
+        <div class="cards-container">
+            {% for service in services %}
+                <div class="service-card">
+                    <h1 class="service-title">{{service.title}}</h1>
+                    <p class="service-detail">{{service.description}}</p>
+                </div>
+            {% endfor %}
+        </div>
     </section>
     <section class="contact">
         <h2 class="contact-form_title">Des questions ?</h2>
