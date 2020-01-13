@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Votre message a été envoyé !
+    {{ 'contact.message1'|trans }}
 {% endblock %}
 
 {% block body %}
 <section class="response">
-<p class="response_paragraph">Merci !</p>
-<p class="response_paragraph">Votre message a bien été envoyé, je vous recontacterai dès que possible.</p>
-<p class="response_paragraph">A bientôt !</p>
+<p class="response_paragraph">{{ 'contact.message2'|trans }}</p>
+<p class="response_paragraph">{{ 'contact.message3'|trans }}</p>
+<p class="response_paragraph">{{ 'contact.message4'|trans }}</p>
 </section>
 {% endblock %}
