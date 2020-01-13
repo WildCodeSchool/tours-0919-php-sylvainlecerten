@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <section class="presentation_intro">
+    <section id="ancre_presentation" class="presentation_intro">
         <h1 class="who_am_i">The French Copywriter</h1>
         <h2 class="sb_who_am_i">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</h2>
     </section>
@@ -49,7 +49,7 @@
             <img src="images/chibi.jpeg" class="presentation_img" alt="illustration">
         </div>
     </section>
-    <section class="service-section">
+    <section id="ancre_service" class="service-section">
         <h2 class="services_title">Ce que je peux faire pour vous</h2>
         <div class="cards-container">
             {% for service in services %}
@@ -60,7 +60,7 @@
             {% endfor %}
         </div>
     </section>
-    <section class="contact">
+    <section id="ancre_formulaire" class="contact">
         <h2 class="contact-form_title">Des questions ?</h2>
         {{ form_start(form, {'attr':{'class':'contact-form'}}) }}
             <p class="contact-form_subtitle">Bonjour !</p>
@@ -91,7 +91,7 @@
             <button class="contact-form_submit-button" >{{ button_label|default('Envoyer') }}</button>
         {{ form_end(form) }}
     </section>
-    <section class="newsletter">
+    <section id="ancre_abonnez_vous" class="newsletter">
         <p class="newsletter-intro">Pour rester informé, abonnez-vous à la newsletter de votre copywriter préféré !</p>
         {{ form_start(formNews)}}
             {{ form_row(formNews.email, {'attr':{'class':'newsletter-form_input', 'placeholder':'Saisissez votre e-mail ici'}}) }}
