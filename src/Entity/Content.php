@@ -36,6 +36,11 @@ class Content
      */
     private $ordering;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Language;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Content
     public function setOrdering(int $ordering): self
     {
         $this->ordering = $ordering;
+
+        return $this;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->Language;
+    }
+
+    public function setLanguage(?string $Language): self
+    {
+        $this->Language = $Language;
 
         return $this;
     }

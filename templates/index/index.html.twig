@@ -88,14 +88,14 @@
                 </div>    
                 <p class="contact-form_part">{{ 'contact.input7'|trans }}</p>
             </div>
-            <button class="contact-form_submit-button" >{{ button_label|default('Envoyer') }}</button>
+            <button class="contact-form_submit-button" >{{ 'contact.input8'|trans }}</button>
         {{ form_end(form) }}
     </section>
     <section id="ancre_abonnez_vous" class="newsletter">
         <p class="newsletter-intro">{{ 'news.input1'|trans }}</p>
         {{ form_start(formNews)}}
             {{ form_row(formNews.email, {'attr':{'class':'newsletter-form_input', 'placeholder':'Saisissez votre e-mail ici'}}) }}
-            <button class="contact-form_submit-button" >{{ button_label|default('S\'abonner') }}</button>
+            <button class="contact-form_submit-button" >{{ 'news.button'|trans }}</button>
         {{ form_end(formNews) }}
     </section>
 {% endblock %}

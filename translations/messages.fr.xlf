@@ -105,10 +105,19 @@
         <source>contact.input7</source>
         <target>Merci, et à bientôt !</target>
       </trans-unit>
+      <trans-unit id="iTYJ5ea" resname="contact.input8">
+        <source>contact.input8</source>
+        <target>Envoyer</target>
+      </trans-unit>
       <trans-unit id="qeGKXSj" resname="news.input1">
         <source>news.input1</source>
         <target>Pour rester informé, abonnez-vous à la newsletter de votre copywriter préféré !</target>
       </trans-unit>
+      <trans-unit id="1jAvzT7" resname="news.button">
+        <source>news.button</source>
+        <target>S'abonner</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>
