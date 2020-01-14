@@ -39,7 +39,7 @@ class Content
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $Language;
+    private $language;
 
     public function getId(): ?int
     {
@@ -96,12 +96,12 @@ class Content
 
     public function getLanguage(): ?string
     {
-        return $this->Language;
+        return $this->language;
     }
 
-    public function setLanguage(?string $Language): self
+    public function setLanguage(?string $language): self
     {
-        $this->Language = $Language;
+        $this->language = $language;
 
         return $this;
     }

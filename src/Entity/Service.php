@@ -34,7 +34,7 @@ class Service
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Language;
+    private $language;
 
     public function getId(): ?int
     {
@@ -79,12 +79,12 @@ class Service
 
     public function getLanguage(): ?string
     {
-        return $this->Language;
+        return $this->language;
     }
 
-    public function setLanguage(string $Language): self
+    public function setLanguage(string $language): self
     {
-        $this->Language = $Language;
+        $this->language = $language;
 
         return $this;
     }
