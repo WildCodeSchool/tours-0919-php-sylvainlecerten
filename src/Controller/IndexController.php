@@ -24,15 +24,26 @@ class IndexController extends AbstractController
         Request $request
     ):Response {
         $whoAmIContents = $contentRepository->findBy(
-            ['category' => 'whoami'],
+            [
+                'category' => 'whoami',
+                'language' => $request->getLocale()
+            ],
             ['ordering' => 'ASC']
         );
 
         $presentationContents = $contentRepository->findBy(
-            ['category' => 'presentation'],
+            [
+                'category' => 'presentation',
+                'language' => $request->getLocale()
+            ],
             ['ordering' => 'ASC']
         );
-
+        
+        $services = $serviceRepository->findBy(
+            ['language' => $request->getLocale()],
+            ['ordering' => 'ASC']
+        );
+        
         // Formulaire de contact
         $message=new Message();
         $form = $this->createForm(MessageType::class, $message);
@@ -59,7 +70,7 @@ class IndexController extends AbstractController
             return $this->redirectToRoute('newsletter-form-response');
         }
 
-        $services = $serviceRepository->findAll();
+
 
         return $this->render('index/index.html.twig', [
             'whoAmIContents' => $whoAmIContents,

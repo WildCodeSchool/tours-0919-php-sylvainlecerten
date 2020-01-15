@@ -21,6 +21,40 @@
     color:$link-is-hover;
 }
 
+.delete-button{
+    font-size: 1.5rem;
+    padding:0;
+    background-color: $section-title-color;
+    color:$clear-part_color;
+    border-radius: 5px;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    border-style: none;
+}
+
+.delete-button:hover{
+    text-decoration: none;
+    color:$link-is-hover; 
+}
+
+.update-link{
+    font-size: 1.5rem;
+    padding:0;
+    background-color: $section-title-color;
+    color:$clear-part_color;
+    border-radius: 5px;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    border-style: none;
+}
+
+.update-link:hover{
+    text-decoration: none;
+    color:$link-is-hover; 
+}
+
 .content-index_title{
     color: $section-title-color;
     margin: 2rem;
