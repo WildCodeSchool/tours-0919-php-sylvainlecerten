@@ -1,0 +1,35 @@
+//MISE EN FORME LIEN VERS L4ADMINISTRATION DES MESSAGES RECUS
+.message-link_container{
+    width: 100%;
+    display: flex;
+    margin-bottom:1rem;
+}
+
+.message-index_link{
+    font-size: 1.5rem;
+    padding:1rem;
+    background-color: $section-title-color;
+    color:$clear-part_color;
+    border-radius: 5px;
+    width: 30%;
+    margin:auto;
+    text-align: center;
+}
+
+.message-index_link:hover{
+    text-decoration: none;
+    color:$link-is-hover;
+}
+
+.content-index_title{
+    color: $section-title-color;
+    margin: 2rem;
+    text-align: center;
+}
+.admin-table_link{
+    color: $section-title-color;
+}
+.admin-table_link:hover{
+    color: $link-is-hover;
+    text-decoration: none;
+}

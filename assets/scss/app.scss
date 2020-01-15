@@ -8,7 +8,10 @@
 @import "servicesPart";
 @import "navbar";
 @import "footer";
+@import "contentIndex";
+@import "newContent";
 
 body{
     margin: 0;
+    background-color: $clear-part_color;
 }
