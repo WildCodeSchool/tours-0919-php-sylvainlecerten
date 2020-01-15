@@ -22,5 +22,5 @@
         <a class="message-index_link" href="{{ path('newsletter_index') }}">Retour</a>
         <a class="message-index_link" href="{{ path('newsletter_edit', {'id': newsletter.id}) }}">Editer</a>
     </div>
-    {{ include('newsletter/_delete_form.html.twig') }}
+    <div class="message-index_link">{{ include('newsletter/_delete_form.html.twig') }}</div>
 {% endblock %}
