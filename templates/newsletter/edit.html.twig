@@ -3,11 +3,13 @@
 {% block title %}Editer un e-mail{% endblock %}
 
 {% block body %}
-    <h1>Editer une adresse e-mail</h1>
+    <h1 class="content-index_title">Editer une adresse e-mail</h1>
 
     {{ include('newsletter/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
-
-    <a href="{{ path('newsletter_index') }}">Retour à la liste</a>
+    
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('newsletter_index') }}">Retour</a>
+    </div>
 
     {{ include('newsletter/_delete_form.html.twig') }}
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block title %}Abonnés à la newsletter{% endblock %}
 
 {% block body %}
-    <h1>Abonnés à la newsletter</h1>
+    <h1 class="content-index_title">Abonnés à la newsletter</h1>
 
     <table class="table">
         <tbody>
@@ -18,9 +18,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('newsletter_index') }}">Retour à la liste</a>
-
-    <a href="{{ path('newsletter_edit', {'id': newsletter.id}) }}">Editer</a>
-
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('newsletter_index') }}">Retour</a>
+        <a class="message-index_link" href="{{ path('newsletter_edit', {'id': newsletter.id}) }}">Editer</a>
+    </div>
     {{ include('newsletter/_delete_form.html.twig') }}
 {% endblock %}
