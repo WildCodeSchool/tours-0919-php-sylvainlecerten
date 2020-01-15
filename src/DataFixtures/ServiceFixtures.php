@@ -24,7 +24,7 @@ class ServiceFixtures extends Fixture
 
         $service3 = new Service();
         $service3->setTitle('Ecriture de votre histoire.');
-        $service3->setDescription('Le background est primordial que vos clients se reconnaissent.');
+        $service3->setDescription('Le background est primordial pour que vos clients se reconnaissent.');
         $service3->setOrdering('30');
         $manager->persist($service3);
 
