@@ -89,7 +89,12 @@ class ContentFixtures extends Fixture
         $contentE->setOrdering('50');
         $contentE->setLanguage('en');
         $manager->persist($contentE);
+    
+        $manager->flush();
+    }
 
+    public function load2(ObjectManager $manager)
+    {
         $content13 = new Content();
         $content13->setType('title');
         $content13->setValue('Je suis né écrivain.');
