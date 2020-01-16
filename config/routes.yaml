@@ -1,7 +1,12 @@
-index:
+homepage:
     path: /
-    controller: App\Controller\IndexController::index
-
-    
-
-
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /fr
+        permanent: true
+login:
+    path: /login
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /fr/login
+        permanent: true
