@@ -4,9 +4,9 @@
         <div class= "box-footer">
             <li class="nav-lifooter"><a class="footer_link" href="#">{{ 'footer.item1'|trans }}</a></li>
             {% if app.user %}
-                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_logout') }}">{{ 'footer.connect'|trans }}</a>
+                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_logout') }}">{{ 'footer.disconnect'|trans }}</a>
                 {% else %}
-                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_login') }}">{{ 'footer.disconnect'|trans }}</a>
+                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_login') }}">{{ 'footer.connect'|trans }}</a>
             </li>
             {% endif %}
         </div>
