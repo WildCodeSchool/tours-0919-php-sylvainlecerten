@@ -6,6 +6,13 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\Content;
 
+/**
+ * This will suppress all the PMD warnings in
+ * this class.
+ *
+ * @SuppressWarnings(PHPMD)
+ */
+
 class ContentFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
@@ -90,11 +97,6 @@ class ContentFixtures extends Fixture
         $contentE->setLanguage('en');
         $manager->persist($contentE);
     
-        $manager->flush();
-    }
-
-    public function load2(ObjectManager $manager)
-    {
         $content13 = new Content();
         $content13->setType('title');
         $content13->setValue('Je suis né écrivain.');
