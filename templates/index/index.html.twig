@@ -7,11 +7,11 @@
 {% block body %}
     <section id="ancre_presentation" class="presentation_intro">
         <h1 class="who_am_i">The French Copywriter</h1>
-        <h2 class="sb_who_am_i">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</h2>
+        <h2 class="sb_who_am_i">{{ 'index.subtitle1'|trans }}</h2>
     </section>
     <section class="presentation_section">
         <div class="presentation_detail">
-            <img src="images/chibi.jpeg" class="presentation_img" alt="illustration">
+            <img src="../images/chibi.jpeg" class="presentation_img" alt="illustration">
             <div class="presentations">
                 {% for whoAmIContent in whoAmIContents %}
                     <div class="presentation_part">
@@ -46,11 +46,11 @@
                     </div>
                 {% endfor %}
             </div>
-            <img src="images/chibi.jpeg" class="presentation_img" alt="illustration">
+            <img src="../images/chibi.jpeg" class="presentation_img" alt="illustration">
         </div>
     </section>
     <section id="ancre_service" class="service-section">
-        <h2 class="services_title">Ce que je peux faire pour vous</h2>
+        <h2 class="services_title">{{ 'index.subtitle2'|trans }}</h2>
         <div class="cards-container">
             {% for service in services %}
                 <div class="service-card">
@@ -61,41 +61,41 @@
         </div>
     </section>
     <section id="ancre_formulaire" class="contact">
-        <h2 class="contact-form_title">Des questions ?</h2>
+        <h2 class="contact-form_title">{{ 'index.subtitle3'|trans }}</h2>
         {{ form_start(form, {'attr':{'class':'contact-form'}}) }}
-            <p class="contact-form_subtitle">Bonjour !</p>
+            <p class="contact-form_subtitle">{{ 'contact.input1'|trans }}</p>
             <div class = "contact-form_text">
                 <div class="contact-form-text_paragraph"
-                    <p class="contact-form_part">Je m'appelle </p>
+                    <p class="contact-form_part">{{ 'contact.input2'|trans }}</p>
                     {{ form_row(form.Prenom, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre prénom'}}) }}
                     {{ form_row(form.Nom, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre nom'}}) }}
                 </div>
                 <div class="contact-form-text_paragraph"    
-                    <p class="contact-form_part">et je fais partie de la société </p>
+                    <p class="contact-form_part">{{ 'contact.input3'|trans }}</p>
                     {{ form_row(form.Societe, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre société'}}) }}
                 </div>
                 <div class="contact-form-text_paragraph"
-                    <p class="contact-form_part">Je souhaiterai </p>
+                    <p class="contact-form_part">{{ 'contact.input4'|trans }}</p>
                     {{ form_row(form.Message, {'attr':{'class':'contact-form_input contact-form_part contact-form_message', 'placeholder':'Votre demande'}}) }}
                 </div>
                 <div class="contact-form-text_paragraph"
-                    <p>Merci de me recontacter au </p>
+                    <p>{{ 'contact.input5'|trans }}</p>
                     {{ form_row(form.Telephone, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre téléphone'}}) }}
                 </div>
                 <div class="contact-form-text_paragraph"    
-                    <p class="contact-form_part">ou par mail : </p>
+                    <p class="contact-form_part">{{ 'contact.input6'|trans }}</p>
                     {{ form_row(form.Email, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre e-mail'}}) }}
                 </div>    
-                <p class="contact-form_part">Merci, et à bientôt !</p>
+                <p class="contact-form_part">{{ 'contact.input7'|trans }}</p>
             </div>
-            <button class="contact-form_submit-button" >{{ button_label|default('Envoyer') }}</button>
+            <button class="contact-form_submit-button" >{{ 'contact.input8'|trans }}</button>
         {{ form_end(form) }}
     </section>
     <section id="ancre_abonnez_vous" class="newsletter">
-        <p class="newsletter-intro">Pour rester informé, abonnez-vous à la newsletter de votre copywriter préféré !</p>
+        <p class="newsletter-intro">{{ 'news.input1'|trans }}</p>
         {{ form_start(formNews)}}
             {{ form_row(formNews.email, {'attr':{'class':'newsletter-form_input', 'placeholder':'Saisissez votre e-mail ici'}}) }}
-            <button class="contact-form_submit-button" >{{ button_label|default('S\'abonner') }}</button>
+            <button class="contact-form_submit-button" >{{ 'news.button'|trans }}</button>
         {{ form_end(formNews) }}
     </section>
 {% endblock %}

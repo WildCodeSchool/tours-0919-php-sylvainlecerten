@@ -3,7 +3,7 @@
 {% block title %}Messages reçus{% endblock %}
 
 {% block body %}
-    <h1>Messages reçus</h1>
+    <h1 class="content-index_title">Messages reçus</h1>
 
     <table class="table">
         <thead>
@@ -29,8 +29,8 @@
                 <td>{{ message.Telephone }}</td>
                 <td>{{ message.Email }}</td>
                 <td>
-                    <a href="{{ path('message_show', {'id': message.id}) }}">Voir</a>
-                    <a href="{{ path('message_edit', {'id': message.id}) }}">Editer</a>
+                    <a class="admin-table_link" href="{{ path('message_show', {'id': message.id}) }}">Voir</a>
+                    <a class="admin-table_link" href="{{ path('message_edit', {'id': message.id}) }}">Editer</a>
                 </td>
             </tr>
         {% else %}
@@ -40,6 +40,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('message_new') }}">Ajouter un message</a>
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('content_index') }}">Retour</a>
+        <a class="message-index_link" href="{{ path('message_new') }}">Ajouter un message</a>
+    </div>
 {% endblock %}

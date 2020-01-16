@@ -3,11 +3,14 @@
 {% block title %}Edit Content{% endblock %}
 
 {% block body %}
-    <h1>Edit Content</h1>
-
-    {{ include('content/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('content_index') }}">back to list</a>
-
-    {{ include('content/_delete_form.html.twig') }}
+    <h1 class="content-index_title">Editer un contenu</h1>
+    <div class="table-container">
+        {{ include('content/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+    </div>
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('content_index') }}">Retour</a>
+    </div>
+    <div class="message-index_link">
+        <div class="message-index_link">{{ include('content/_delete_form.html.twig') }}</div>
+    </div>
 {% endblock %}

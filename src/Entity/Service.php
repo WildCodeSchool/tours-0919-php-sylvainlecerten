@@ -31,6 +31,11 @@ class Service
      */
     private $ordering;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $language;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Service
     public function setOrdering(int $ordering): self
     {
         $this->ordering = $ordering;
+
+        return $this;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    public function setLanguage(string $language): self
+    {
+        $this->language = $language;
 
         return $this;
     }

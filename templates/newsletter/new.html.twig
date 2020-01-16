@@ -3,9 +3,11 @@
 {% block title %}Nouvelle adresse e-mail{% endblock %}
 
 {% block body %}
-    <h1>Ajouter un e-mail</h1>
+    <h1 class="content-index_title">Ajouter un e-mail</h1>
 
     {{ include('newsletter/_form.html.twig') }}
 
-    <a href="{{ path('newsletter_index') }}">Retour à la liste</a>
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('newsletter_index') }}">Retour</a>
+    </div>
 {% endblock %}

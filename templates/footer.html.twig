@@ -2,13 +2,11 @@
 {% block footer %}
     <ul class="ul_copywriter">
         <div class= "box-footer">
-            <li class="nav-lifooter"><a class="footer_link" href="#">Mentions légales</a></li>
-            <li class="nav-lifooter"><a class="footer_link" href="#">Newsletter</a></li>
+            <li class="nav-lifooter"><a class="footer_link" href="#">{{ 'footer.item1'|trans }}</a></li>
             {% if app.user %}
-                {{ app.user.email }}
-                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_logout') }}"> Se déconnecter</a>
+                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_logout') }}">{{ 'footer.connect'|trans }}</a>
                 {% else %}
-                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_login') }}"> Se connecter</a>
+                <li class="nav-lifooter"><a class="footer_link" href="{{ path('app_login') }}">{{ 'footer.disconnect'|trans }}</a>
             </li>
             {% endif %}
         </div>
