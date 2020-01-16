@@ -28,6 +28,7 @@ class ServiceFixtures extends Fixture
         $service2->setTitle('Ecriture de contenus');
         $service2->setDescription('Accrochez google et les clients. Je décris votre entreprise et ses moeurs. ');
         $service2->setOrdering('20');
+        $serviceA->setLanguage('fr');
         $manager->persist($service2);
 
         $serviceB = new Service();
