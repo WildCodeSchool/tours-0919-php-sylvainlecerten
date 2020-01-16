@@ -20,7 +20,7 @@
     border-bottom-right-radius: 10px;
     box-shadow: 2px 2px 2px $section-title_color;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem;
 }
 
@@ -30,13 +30,13 @@
     text-align: center;
     width:80%;
     margin: auto;
-    margin-bottom: 1rem;;
 }
 
 .service-detail{
     font-family: $text-police;
     text-align: center;
     font-size: 1rem;
+    margin:auto;
 }
 
 @media screen and (min-width:769px){
