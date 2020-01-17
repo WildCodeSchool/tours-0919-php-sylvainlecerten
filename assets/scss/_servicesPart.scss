@@ -7,7 +7,7 @@
 
 .services_title {
     color: $section-title-color;
-    font-family: $title-police;
+    font-family: $title-font;
     text-align: center;
     font-size: 2rem;
 }
@@ -25,7 +25,7 @@
 }
 
 .service-title {
-    font-family: $title-police;
+    font-family: $title-font;
     font-size: 1.5rem;
     text-align: center;
     width: 80%;
@@ -34,7 +34,7 @@
 }
 
 .service-detail {
-    font-family: $text-police;
+    font-family: $text-font;
     text-align: center;
     font-size: 1rem;
     margin: auto;
