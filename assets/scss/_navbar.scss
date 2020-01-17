@@ -1,24 +1,24 @@
-.navbar{
-    background-color: $clear-part_color;
+.navbar {
+    background-color: $clear-part-color;
     min-height: 8vh;
-    padding:0;
+    padding: 0;
 }
 
-.nav-lien{
+.nav-lien {
     color: $section-title-color;
 }
 
-.nav-lien:hover{
+.nav-lien:hover {
     color: $link-is-hover;
     text-decoration: none;
 }
 
-.nav-item{
+.nav-item {
     margin: 0.3rem;
 }
 
-@media screen and (min-width:769px){
-    .nav-item{
+@media screen and (min-width:769px) {
+    .nav-item {
         padding: 1rem;
     }
 }

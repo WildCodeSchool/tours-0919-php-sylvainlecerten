@@ -12,7 +12,6 @@ use App\Entity\Content;
  *
  * @SuppressWarnings(PHPMD)
  */
-
 class ContentFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
