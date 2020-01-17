@@ -1,44 +1,44 @@
-.contact{
-    background-color:#1e1e1e;
+.contact {
+    background-color: #1e1e1e;
     color: white;
 }
 
-.contact-form_title{
+.contact-form_title {
     color: $section-title-color;
-    font-family: $titre_police;
+    font-family: $title-police;
     font-size: 2rem;
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.contact-form_subtitle{
+.contact-form_subtitle {
     margin-left: 3rem;
-    font-family: $text_police;
+    font-family: $text-police;
 }
 
-.contact-form_text{
-    display:flex;
+.contact-form_text {
+    display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-left : 3rem;
     margin-right: 3rem;
-    font-family: $text_police;
+    font-family: $text-police;
 }
 
-.contact-form-text_paragraph{
+.contact-form-text_paragraph {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-.contact-form_part{
+.contact-form_part {
     min-height: 16px;
 }
 
-.contact-form_input{
-    background-color:#1e1e1e;
+.contact-form_input {
+    background-color: #1e1e1e;
     width: 100%;
     height: 28px;
     border-radius: 3px;
@@ -48,11 +48,11 @@
     border-color: #c8c8c8;
 }
 
-.contact-form_submit-button{
+.contact-form_submit-button {
     width : 30%;
-    padding:5px;
-    border-radius:3px;
-    border:none;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
     color: white;
     background-color: $section-title-color;
     margin-left:35%;
@@ -60,33 +60,33 @@
     margin-bottom: 28px;
 }
 
-@media screen and (min-width:769px){
-    .contact-form_title{
+@media screen and (min-width:769px) {
+    .contact-form_title {
         font-size: 4rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
 
-    .contact-form_subtitle{
+    .contact-form_subtitle {
         margin-left: 7rem;
     }
 
-    .contact-form_text{
+    .contact-form_text {
         margin-left : 7rem;
         margin-right: 7rem;
     }
 
-    .contact-form_part{
+    .contact-form_part {
         min-height: 16px;
     }
 
-    .contact-form_input{
+    .contact-form_input {
         width: 200%;
     }
 
-    .contact-form_submit-button{ 
+    .contact-form_submit-button { 
         width : 16%;
-        padding:12px;
-        margin-left:42%;
+        padding: 12px;
+        margin-left: 42%;
     }
 }

@@ -19,7 +19,7 @@ class UserFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        // Création d’un utilisateur de type “administrateur”
+        // Admin type user creation
         $admin = new User();
         $admin->setEmail('admin@monsite.com');
         $admin->setRoles(['ROLE_ADMIN']);
@@ -30,7 +30,7 @@ class UserFixtures extends Fixture
 
         $manager->persist($admin);
 
-        // Sauvegarde des 2 nouveaux utilisateurs :
+        // Saving new users
         $manager->flush();
     }
 }

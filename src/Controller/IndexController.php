@@ -70,8 +70,6 @@ class IndexController extends AbstractController
             return $this->redirectToRoute('newsletter-form-response');
         }
 
-
-
         return $this->render('index/index.html.twig', [
             'whoAmIContents' => $whoAmIContents,
             'presentationContents' => $presentationContents,
@@ -80,8 +78,8 @@ class IndexController extends AbstractController
             'services' => $services,
         ]);
     }
-    //page de redirection suite à validation du formulaire de contact
-    /**
+    // redirection page when you submit contact-form
+    /**i
     * @Route("/sent", name="contact-form-response")
     */
     public function contactSent()
@@ -89,7 +87,7 @@ class IndexController extends AbstractController
         return $this->render('index/contact_sent.html.twig');
     }
 
-    //page de redirection suite à abonnement à la newsletter
+    //predirection when subscribe to newsletter
     /**
     * @Route("/submitted", name="newsletter-form-response")
     */
