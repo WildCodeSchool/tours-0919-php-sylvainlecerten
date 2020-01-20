@@ -95,4 +95,13 @@ class IndexController extends AbstractController
     {
         return $this->render('index/newsletter_ok.html.twig');
     }
+
+    //predirection when subscribe to newsletter
+    /**
+    * @Route("/mention", name="app_mention")
+    */
+    public function legalMention()
+    {
+        return $this->render('mention.html.twig');
+    }
 }
