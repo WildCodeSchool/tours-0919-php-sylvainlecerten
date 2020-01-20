@@ -2,7 +2,7 @@
     
 .mention-index_title{
     color: $section-title-color;
-    font-family: $titre_police;
+    font-family: $title_font;
     font-size: 2rem;
     text-align: center;
     padding-top: 2rem;
@@ -16,7 +16,7 @@
     justify-content: space-between;
     margin-left : 3rem;
     margin-right: 3rem;
-    font-family: $text_police;
+    font-family: $text_font;
 }
 
 .mention-link_container{
