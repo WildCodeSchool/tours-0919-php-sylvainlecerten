@@ -21,6 +21,11 @@
             <li class="nav-item">
                 <a class="nav-lien" href="/fr/#ancre_abonnez_vous">{{ 'menu.item4'|trans }}</a>
             </li>
+            {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-lien" href="/fr/content/">Admin</a>
+                </li>
+            {% endif %}
         </ul>
         <a class="nav-lien nav-link" href="/fr">FR</a>
         <a class="nav-lien nav-link" href="/en">EN</a>
