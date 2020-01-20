@@ -44,7 +44,7 @@ class IndexController extends AbstractController
             ['ordering' => 'ASC']
         );
         
-        // Formulaire de contact
+        // Contact Form
         $message=new Message();
         $form = $this->createForm(MessageType::class, $message);
         $form->handleRequest($request);
@@ -57,7 +57,7 @@ class IndexController extends AbstractController
             return $this->redirectToRoute('contact-form-response');
         }
 
-        // Formulaire newsletter
+        // Newsletter form
         $newsletter=new Newsletter();
         $formNews = $this->createForm(NewsletterType::class, $newsletter);
         $formNews->handleRequest($request);
@@ -79,7 +79,7 @@ class IndexController extends AbstractController
         ]);
     }
     // redirection page when you submit contact-form
-    /**i
+    /**
     * @Route("/sent", name="contact-form-response")
     */
     public function contactSent()
