@@ -15,6 +15,7 @@ class ContentType extends AbstractType
             ->add('type')
             ->add('value')
             ->add('category')
+            ->add('language')
             ->add('ordering')
         ;
         $options;
