@@ -13,9 +13,12 @@ This starter kit is here to easily install The French Copywriter's repository.
 
 ### Install
 
-1. Clone this project
-2. Run `composer install`
-3. Run `yarn install`
+1. Clone this project with git clone `git clone https://github.com/WildCodeSchool/tours-0919-php-sylvainlecerten.git`
+2. Move to the repository with `cd tours-0919-php-sylvainlecerten/`
+3. Run `composer install`
+4. Run `yarn install`
+5. Copy `.env` file and modify it in `.env.local`
+6. Replace user, password and db_name in the line `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`in`.env.local` 
 
 ### Working
 
