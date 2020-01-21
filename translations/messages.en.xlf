@@ -21,6 +21,10 @@
         <source>menu.item4</source>
         <target>Subscribe</target>
       </trans-unit>
+      <trans-unit id="SJ4NbcS" resname="menu.item5">
+        <source>menu.item5</source>
+        <target>My blog</target>
+      </trans-unit>
       <trans-unit id="kOqXyDb" resname="footer.item1">
         <source>footer.item1</source>
         <target>Legal mentions</target>
