@@ -15,6 +15,7 @@ class ServiceType extends AbstractType
             ->add('title')
             ->add('description')
             ->add('ordering')
+            ->add('language')
         ;
         $options;
     }

@@ -1,9 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    Le blog du copywriter
-{% endblock %}
+{% block title %}Mon blog{% endblock %}
 
 {% block body %}
-
+    <section class="blog_section">
+        <div class="blogs">
+            {% for blogContent in blogContents %}
+                <div class="blog_part">
+                    {% if blogContent.type == 'title' %}
+                    <h2 class="blog_title">{{ blogContent.value }}</h2>
+                    {% endif %}
+                    {% if blogContent.type == 'subtitle' %}
+                    <h3 class="blog_subtitle">{{ blogContent.value }}</h3>
+                    {% endif %}
+                    {% if blogContent.type == 'paragraph' %}
+                    <p class="blog_paragraph">{{ blogContent.value }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
