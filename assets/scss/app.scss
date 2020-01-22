@@ -1,9 +1,18 @@
 @import "vars";
+@import "presentationForm";
+@import "contactForm";
+@import "contactFormResponse";
+@import "newsletter";
+@import "titlePart";
+@import "introPart";
+@import "servicesPart";
+@import "navbar";
+@import "footer";
+@import "contentIndex";
+@import "newContent";
+@import "mention";
 
 body {
-    background-color: $secondary-color;
-}
-
-a {
-    color: $warm-color;
+    margin: 0;
+    background-color: $clear-part-color;
 }

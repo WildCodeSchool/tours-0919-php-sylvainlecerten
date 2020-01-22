@@ -1,0 +1,42 @@
+//Front for legals-mentions.mention-index_title{
+    
+.mention-index_title{
+    color: $section-title-color;
+    font-family: $title_font;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.mention-index_paragraph{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-left : 3rem;
+    margin-right: 3rem;
+    font-family: $text_font;
+}
+
+.mention-link_container{
+    width: 100%;
+    display: flex;
+    margin-bottom:1rem;
+}
+
+.mention-index_link{
+    font-size: 1.5rem;
+    padding:1rem;
+    background-color: $section-title-color;
+    color:$clear-part_color;
+    border-radius: 5px;
+    width: 23%;
+    margin:auto;
+    text-align: center;
+}
+
+.mention-index_link:hover{
+    text-decoration: none;
+    color:$link-is-hover;
+}

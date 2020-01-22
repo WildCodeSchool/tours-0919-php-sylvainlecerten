@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Who AmI ?
+{% endblock %}
+
+{% block body %}
+    <section id="ancre_presentation" class="presentation_intro">
+        <h1 class="who_am_i">The French Copywriter</h1>
+        <h2 class="sb_who_am_i">{{ 'index.subtitle1'|trans }}</h2>
+    </section>
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <img src="../images/homme.jpeg" class="presentation_img" alt="illustration">
+            <div class="presentations">
+                {% for whoAmIContent in whoAmIContents %}
+                    <div class="presentation_part">
+                        {% if whoAmIContent.type == 'title' %}
+                        <h2 class="presentation_title">{{ whoAmIContent.value }}</h2>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'subtitle' %}
+                        <h3 class="presentation_subtitle">{{ whoAmIContent.value }}</h3>
+                        {% endif %}
+                        {% if whoAmIContent.type == 'paragraph' %}
+                        <p class="presentation_paragraph">{{ whoAmIContent.value }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="presentation_section">
+        <div class="presentation_detail">
+            <div class="presentations">
+                {% for presentationContent in presentationContents %}
+                    <div class="presentation_part">
+                        {% if presentationContent.type == 'title' %}
+                        <h2 class="presentation_title">{{ presentationContent.value }}</h2>
+                        {% endif %}
+                        {% if presentationContent.type == 'subtitle' %}
+                        <h3 class="presentation_subtitle">{{ presentationContent.value }}</h3>
+                        {% endif %}
+                        {% if presentationContent.type == 'paragraph' %}
+                        <p class="presentation_paragraph">{{ presentationContent.value }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <img src="../images/plume.jpeg" class="presentation_img" alt="illustration">
+        </div>
+    </section>
+    <section id="ancre_service" class="service-section">
+        <h2 class="services_title">{{ 'index.subtitle2'|trans }}</h2>
+        <div class="cards-container">
+            {% for service in services %}
+                <div class="service-card">
+                    <h1 class="service-title">{{service.title}}</h1>
+                    <p class="service-detail">{{service.description}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="ancre_formulaire" class="contact">
+        <h2 class="contact-form_title">{{ 'index.subtitle3'|trans }}</h2>
+        {{ form_start(form, {'attr':{'class':'contact-form'}}) }}
+            <p class="contact-form_subtitle">{{ 'contact.input1'|trans }}</p>
+            <div class = "contact-form_text">
+                <div class="contact-form-text_paragraph"
+                    <p class="contact-form_part">{{ 'contact.input2'|trans }}</p>
+                    {{ form_row(form.Prenom, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre prénom'}}) }}
+                    {{ form_row(form.Nom, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre nom'}}) }}
+                </div>
+                <div class="contact-form-text_paragraph"    
+                    <p class="contact-form_part">{{ 'contact.input3'|trans }}</p>
+                    {{ form_row(form.Societe, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre société'}}) }}
+                </div>
+                <div class="contact-form-text_paragraph"
+                    <p class="contact-form_part">{{ 'contact.input4'|trans }}</p>
+                    {{ form_row(form.Message, {'attr':{'class':'contact-form_input contact-form_part contact-form_message', 'placeholder':'Votre demande'}}) }}
+                </div>
+                <div class="contact-form-text_paragraph"
+                    <p>{{ 'contact.input5'|trans }}</p>
+                    {{ form_row(form.Telephone, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre téléphone'}}) }}
+                </div>
+                <div class="contact-form-text_paragraph"    
+                    <p class="contact-form_part">{{ 'contact.input6'|trans }}</p>
+                    {{ form_row(form.Email, {'attr':{'class':'contact-form_input contact-form_part', 'placeholder':'Votre e-mail'}}) }}
+                </div>    
+                <p class="contact-form_part">{{ 'contact.input7'|trans }}</p>
+            </div>
+            <button class="contact-form_submit-button" >{{ 'contact.input8'|trans }}</button>
+        {{ form_end(form) }}
+    </section>
+    <section id="ancre_abonnez_vous" class="newsletter">
+        <p class="newsletter-intro">{{ 'news.input1'|trans }}</p>
+        {{ form_start(formNews)}}
+            {{ form_row(formNews.email, {'attr':{'class':'newsletter-form_input', 'placeholder':'Saisissez votre e-mail ici'}}) }}
+            <button class="contact-form_submit-button" >{{ 'news.button'|trans }}</button>
+        {{ form_end(formNews) }}
+    </section>
+{% endblock %}

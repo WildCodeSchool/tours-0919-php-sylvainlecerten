@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Message{% endblock %}
+
+{% block body %}
+    <h1 class="content-index_title">Ajouter un nouveau message</h1>
+
+    {{ include('message/_form.html.twig') }}
+
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('message_index') }}">Retour</a>
+    </div>
+{% endblock %}

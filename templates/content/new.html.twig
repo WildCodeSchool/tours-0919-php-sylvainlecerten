@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Content{% endblock %}
+
+{% block body %}
+    <h1 class="content-index_title">Ajouter un contenu</h1>
+    <div class="table-container">
+        {{ include('content/_form.html.twig') }}
+    </div>
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('content_index') }}">Retour</a>
+    </div>
+{% endblock %}

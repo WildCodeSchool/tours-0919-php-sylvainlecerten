@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="24VUhGx" resname="menu.item1">
+        <source>menu.item1</source>
+        <target>Présentation</target>
+      </trans-unit>
+      <trans-unit id="umNG1Q4" resname="menu.item2">
+        <source>menu.item2</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="1ZBL3xx" resname="menu.item3">
+        <source>menu.item3</source>
+        <target>Des questions ?</target>
+      </trans-unit>
+      <trans-unit id="GHoGJNZ" resname="menu.item4">
+        <source>menu.item4</source>
+        <target>Abonnez-vous</target>
+      </trans-unit>
+      <trans-unit id="SJ4NbcS" resname="menu.item5">
+        <source>menu.item5</source>
+        <target>Mon blog</target>
+      </trans-unit>
+      <trans-unit id="kOqXyDb" resname="footer.item1">
+        <source>footer.item1</source>
+        <target>Mentions légales</target>
+      </trans-unit>
+      <trans-unit id="nq.r2O9" resname="footer.connect">
+        <source>footer.connect</source>
+        <target>Administration</target>
+      </trans-unit>
+      <trans-unit id="0k1WvLD" resname="footer.disconnect">
+        <source>footer.disconnect</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="Ok.onUG" resname="newsletter.message1">
+        <source>newsletter.message1</source>
+        <target>Vous êtes abonné !</target>
+      </trans-unit>
+      <trans-unit id="Y6rGw8O" resname="newsletter.message2">
+        <source>newsletter.message2</source>
+        <target>Merci !</target>
+      </trans-unit>
+      <trans-unit id="A3xHBY5" resname="newsletter.message3">
+        <source>newsletter.message3</source>
+        <target>Vous êtes désormais abonné à la newsletter.</target>
+      </trans-unit>
+      <trans-unit id="v01hGoD" resname="newsletter.message4">
+        <source>newsletter.message4</source>
+        <target>A bientôt !</target>
+      </trans-unit>
+      <trans-unit id="kLwZ5Lh" resname="contact.message1">
+        <source>contact.message1</source>
+        <target>Votre message a été envoyé !</target>
+      </trans-unit>
+      <trans-unit id="NHXoFPL" resname="contact.message2">
+        <source>contact.message2</source>
+        <target>Merci !</target>
+      </trans-unit>
+      <trans-unit id="bpfuzk5" resname="contact.message3">
+        <source>contact.message3</source>
+        <target>Je vous recontacterai dès que possible.</target>
+      </trans-unit>
+      <trans-unit id="1Te99Gg" resname="contact.message4">
+        <source>contact.message4</source>
+        <target>A bientôt !</target>
+      </trans-unit>
+      <trans-unit id="IdTrjba" resname="index.subtitle1">
+        <source>index.subtitle1</source>
+        <target>FR Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut euismod lorem. Proin congue mattis.</target>
+      </trans-unit>
+      <trans-unit id="JmqUISK" resname="index.subtitle2">
+        <source>index.subtitle2</source>
+        <target>Ce que je peux faire pour vous</target>
+      </trans-unit>
+      <trans-unit id="t9_ElFM" resname="index.subtitle3">
+        <source>index.subtitle3</source>
+        <target>Des questions ?</target>
+      </trans-unit>
+      <trans-unit id="cZKoI5T" resname="contact.input1">
+        <source>contact.input1</source>
+        <target>Bonjour !</target>
+      </trans-unit>
+      <trans-unit id="d49EmEI" resname="contact.input2">
+        <source>contact.input2</source>
+        <target>Je m'appelle </target>
+      </trans-unit>
+      <trans-unit id="rHHud__" resname="contact.input3">
+        <source>contact.input3</source>
+        <target>et je fais partie de la société </target>
+      </trans-unit>
+      <trans-unit id="qd8sFdb" resname="contact.input4">
+        <source>contact.input4</source>
+        <target>Je souhaiterai </target>
+      </trans-unit>
+      <trans-unit id="e8fp6OE" resname="contact.input5">
+        <source>contact.input5</source>
+        <target>Merci de me recontacter au </target>
+      </trans-unit>
+      <trans-unit id="rWtFpkR" resname="contact.input6">
+        <source>contact.input6</source>
+        <target>ou par mail : </target>
+      </trans-unit>
+      <trans-unit id="gKDtane" resname="contact.input7">
+        <source>contact.input7</source>
+        <target>Merci, et à bientôt !</target>
+      </trans-unit>
+      <trans-unit id="iTYJ5ea" resname="contact.input8">
+        <source>contact.input8</source>
+        <target>Envoyer</target>
+      </trans-unit>
+      <trans-unit id="qeGKXSj" resname="news.input1">
+        <source>news.input1</source>
+        <target>Pour rester informé, abonnez-vous à la newsletter de votre copywriter préféré !</target>
+      </trans-unit>
+      <trans-unit id="1jAvzT7" resname="news.button">
+        <source>news.button</source>
+        <target>S'abonner</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

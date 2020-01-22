@@ -1,0 +1,78 @@
+.service-section {
+    background-color: $clear-part-color;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.services_title {
+    color: $section-title-color;
+    font-family: $title-font;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    border-bottom-right-radius: 10px;
+    box-shadow: 2px 2px 2px $section-title-color;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.service-title {
+    font-family: $title-font;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.service-detail {
+    font-family: $text-font;
+    text-align: center;
+    font-size: 1rem;
+    margin: auto;
+}
+
+@media screen and (min-width:769px) {
+    .service-section {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+    }
+
+    .services_title {
+        font-size: 4rem;
+        margin: 3rem;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .service-title {
+        font-size: 2.3rem;
+    }
+
+    .service-detail {
+        font-size: 1.5rem;
+    }
+}

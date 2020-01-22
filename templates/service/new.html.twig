@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau service{% endblock %}
+
+{% block body %}
+    <h1 class="content-index_title">Ajouter un service</h1>
+
+    {{ include('service/_form.html.twig') }}
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('service_index') }}">Retour</a>
+    </div>
+{% endblock %}

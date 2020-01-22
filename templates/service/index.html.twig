@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Service index{% endblock %}
+
+{% block body %}
+    <h1 class="content-index_title">Service index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Ordering</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.id }}</td>
+                <td>{{ service.title }}</td>
+                <td>{{ service.description }}</td>
+                <td>{{ service.ordering }}</td>
+                <td>
+                    <a class="admin-table_link" href="{{ path('service_show', {'id': service.id}) }}">show</a>
+                    <a class="admin-table_link" href="{{ path('service_edit', {'id': service.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('content_index') }}">Retour</a>
+        <a <a class="message-index_link" href="{{ path('service_new') }}">Create new</a>
+    </div>
+{% endblock %}

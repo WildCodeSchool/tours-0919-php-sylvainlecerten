@@ -1,0 +1,41 @@
+.footer_link {
+    color: $color-for-link;
+}
+
+.footer_link:hover {
+    color: $link-is-hover;
+    text-decoration: none;
+}
+
+.footer_link:active {
+    text-decoration: none;
+    color: $link-is-hover;
+}
+
+.navbar-nav {
+    margin: 0.3em;
+    font-family: $title-font;
+}
+
+// footer link list
+.ul_copywriter {
+    display: flex;
+    background-color: $clear-part-color;
+    list-style: none;
+    margin-bottom: 0em;
+    text-align: center;
+    padding-inline-start: 0.1em;
+}
+
+.box-footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.nav-lifooter {
+    margin: 1em;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-family: $title-font;
+}
