@@ -12,7 +12,7 @@ class BlogFixtures extends Fixture
     {
         $publication = new blog();
         $publication->setTitle('Ouverture de mon site !!!');
-        $publication->setSubtitles('Mon premier article');
+        $publication->setSubtitle('Mon premier article');
         $publication->setPublication('Voici mon tout premier article sur cette section blog toute neuve.');
         $manager->persist($publication);
 

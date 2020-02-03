@@ -24,7 +24,7 @@ class Blog
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $subtitles;
+    private $subtitle;
 
     /**
      * @ORM\Column(type="text")
@@ -48,14 +48,14 @@ class Blog
         return $this;
     }
 
-    public function getSubtitles(): ?string
+    public function getSubtitle(): ?string
     {
-        return $this->subtitles;
+        return $this->subtitle;
     }
 
-    public function setSubtitles(string $subtitles): self
+    public function setSubtitle(string $subtitle): self
     {
-        $this->subtitles = $subtitles;
+        $this->subtitle = $subtitle;
 
         return $this;
     }
