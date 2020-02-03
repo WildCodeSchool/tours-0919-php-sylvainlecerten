@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+    <h1>Blog</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>{{ blog.subtitle }}</td>
+            </tr>
+            <tr>
+                <td>{{ blog.publication }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="message-index_link" href="{{ path('app_article') }}">back to list</a>
+{% endblock %}
