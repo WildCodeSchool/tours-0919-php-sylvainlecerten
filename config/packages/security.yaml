@@ -36,6 +36,16 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/fr/content, roles: ROLE_ADMIN }
+        - { path: ^/fr/service, roles: ROLE_ADMIN }
+        - { path: ^/fr/newsletter, roles: ROLE_ADMIN }
+        - { path: ^/fr/message, roles: ROLE_ADMIN }
+        - { path: ^/fr/blog, roles: ROLE_ADMIN }
+
         - { path: ^/en/content, roles: ROLE_ADMIN }
+        - { path: ^/en/service, roles: ROLE_ADMIN }
+        - { path: ^/en/newsletter, roles: ROLE_ADMIN }
+        - { path: ^/en/message, roles: ROLE_ADMIN }
+        - { path: ^/en/blog, roles: ROLE_ADMIN }
+
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
