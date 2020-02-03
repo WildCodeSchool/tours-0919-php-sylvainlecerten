@@ -10,7 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Title</th>
-                <th>Subtitles</th>
+                <th>Subtitle</th>
                 <th>Publication</th>
                 <th>actions</th>
             </tr>
@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ blog.id }}</td>
                 <td>{{ blog.title }}</td>
-                <td>{{ blog.subtitles }}</td>
+                <td>{{ blog.subtitle }}</td>
                 <td>{{ blog.publication }}</td>
                 <td>
                     <a class="admin-table_link" href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
