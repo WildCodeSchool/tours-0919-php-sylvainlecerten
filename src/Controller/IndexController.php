@@ -104,23 +104,4 @@ class IndexController extends AbstractController
     {
         return $this->render('mention.html.twig');
     }
-
-    /**
-    * @Route("/blog", name="app_blog")
-    */
-    public function blog(
-        ContentRepository $contentRepository,
-        Request $request
-    ):Response {
-        $blogContents = $contentRepository->findBy(
-            [
-                'category' => 'blog',
-                'language' => $request->getLocale()
-            ],
-            ['ordering' => 'DESC']
-        );
-        return $this->render('blog/blog.html.twig', [
-            'blogContents' => $blogContents,
-        ]);
-    }
 }
