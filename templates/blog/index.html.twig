@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog index{% endblock %}
+
+{% block body %}
+    <h1>Blog index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Publication</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for blog in blogs %}
+            <tr>
+                <td>{{ blog.id }}</td>
+                <td>{{ blog.title }}</td>
+                <td>{{ blog.subtitle }}</td>
+                <td>{{ blog.publication }}</td>
+                <td>
+                    <a class="admin-table_link" href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
+                    <a class="admin-table_link" href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="message-link_container">
+        <a class="message-index_link" href="{{ path('blog_new') }}">Create new</a>
+        <a class="message-index_link" href="{{ path('content_index') }}">Retour</a>
+    </div>
+{% endblock %}
