@@ -18,7 +18,7 @@ class ArticleController extends AbstractController
     /**
     * @Route("/", name="app_article")
     */
-    public function articles(BlogRepository $blogRepository, Request $request): Response
+    public function articles(BlogRepository $blogRepository): Response
     {
         return $this->render('blog/article.html.twig', [
             'blogs' => $blogRepository->findAll(),
@@ -28,7 +28,7 @@ class ArticleController extends AbstractController
     /**
      * @Route("/public/{id}", name="blog_show_public", methods={"GET"})
      */
-    public function public_show (Blog $blog): Response
+    public function publicShow(Blog $blog): Response
     {
         return $this->render('blog/article_public.html.twig', [
             'blog' => $blog,
